@@ -1,5 +1,5 @@
 {
-  "name": "escape-unlocked",
+  "name": "",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/escape-unlocked/app.git"
+    "url": ""
   },
-  "author": "Merlin Patterson",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "airbnb-prop-types": "^2.8.1",
