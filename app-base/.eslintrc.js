@@ -21,7 +21,7 @@ module.exports = {
   ],
 
   rules: {
-    // these are temporary until the import package gets fixed for meteor
+    // temporary until the import package gets fixed for meteor (eslint-plugin-import/issues/479)
     'import/no-absolute-path': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
@@ -55,10 +55,8 @@ module.exports = {
 
   settings: {
     'import/resolver': {
-      meteor: [
-        '.js',
-        '.jsx',
-      ],
+      meteor: ['.js', '.jsx'],
     },
+    'propWrapperFunctions': ['propTypesHandler'],
   },
 };

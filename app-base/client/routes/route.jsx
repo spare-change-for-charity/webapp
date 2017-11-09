@@ -4,13 +4,12 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 
 import Layout from '../Layout';
 
-const route = ({content, name, path}) => {
-  const Content = content;
+const route = ({content: Content, name, path}) => {
   FlowRouter.route(path, {
     name,
     action(routeParams, queryParams) {
       mount(Layout, {
-        content: (<Content {...routeParams} {...queryParams} />),
+        content: () => (<Content {...routeParams} {...queryParams} />),
       });
     },
   });

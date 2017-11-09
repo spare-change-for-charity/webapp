@@ -5,7 +5,7 @@ import React from 'react';
 const ContentWrapper = ({content}) => {
   return (
     <div style={style}>
-      {content}
+      {content()}
     </div>
   );
 };
@@ -13,7 +13,7 @@ const ContentWrapper = ({content}) => {
 ContentWrapper.displayName = 'ContentWrapper';
 
 ContentWrapper.propTypes = forbidExtraProps({
-  content: PropTypes.element.isRequired,
+  content: PropTypes.func.isRequired,
 });
 
 const style = {
