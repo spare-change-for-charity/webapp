@@ -5,7 +5,10 @@ const theme = {
     medium: '@media (max-width: 1047px)',
     large: '@media (min-width: 1048px)',
   },
-  colors: {},
+  colors: {
+    black: 'rgb(0, 0, 0)',
+    white: 'rgb(255, 255, 255)',
+  },
   fonts: {},
   units: size => `${size}rem`,
 };

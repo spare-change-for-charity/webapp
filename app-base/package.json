@@ -59,6 +59,7 @@
     "stylelint-order": "^0.6.0"
   },
   "jest": {
+    "coverageDirectory": "./tests/coverage",
     "setupFiles": ["./tests/setup.js"]
   }
 }

@@ -1,6 +1,8 @@
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import React from 'react';
 
+import logger from '/lib/logger';
+
 import context from './context';
 
 import ContentWrapper from './ContentWrapper';
@@ -14,6 +16,11 @@ class Layout extends React.Component {
     return {
       context,
     };
+  }
+
+  componentDidCatch(error, info) {
+    logger.error(error);
+    logger.error(info);
   }
 
   render() {
