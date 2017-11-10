@@ -2,7 +2,7 @@ import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import randomId from '/client/lib/randomId';
-console.log(randomId)
+
 class Checkbox extends React.Component {
   constructor(props) {
     super(props);

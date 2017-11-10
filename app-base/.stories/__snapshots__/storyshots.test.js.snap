@@ -15,3 +15,9 @@ exports[`Storyshots atoms/Checkbox basic 1`] = `
   </label>
 </span>
 `;
+
+exports[`Storyshots atoms/Input basic 1`] = `
+<input
+  type="text"
+/>
+`;

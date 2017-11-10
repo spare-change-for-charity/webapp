@@ -6,10 +6,10 @@ class Form extends React.Component {
   onSubmitWrapper = (event) => {
     event.preventDefault();
     const form = event.target;
-    const formObject = Array.from(form.elements).reduce((object, input) => (
+    const formData = Array.from(form.elements).reduce((object, input) => (
       input.name ? {...object, [input.name]: input.value} : object
     ), {});
-    this.props.onSubmit(formObject);
+    this.props.onSubmit(formData);
   }
 
   render() {
