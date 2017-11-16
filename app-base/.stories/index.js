@@ -6,6 +6,6 @@ import {linkTo} from '@storybook/addon-links';
 
 import {Button, Welcome} from '@storybook/react/demo';
 
-// import '/client/styles/appwide.css';
+import '/client/styles/appwide.css';
 
 require('./atoms');

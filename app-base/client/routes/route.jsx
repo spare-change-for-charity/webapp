@@ -9,7 +9,7 @@ const route = ({content: Content, name, path}) => {
     name,
     action(routeParams, queryParams) {
       mount(Layout, {
-        content: () => (<Content {...routeParams} {...queryParams} />),
+        content: () => (<Content {...routeParams} {...queryParams} />), // eslint-disable-line react/display-name
       });
     },
   });

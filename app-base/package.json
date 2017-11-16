@@ -9,6 +9,7 @@
     "lint:js": "eslint --ext=js,jsx .",
     "lint:size": "meteor --settings settings/local.json --production --extra-packages bundle-visualizer",
     "test": "jest",
+    "test:cover": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -36,7 +37,7 @@
     "@storybook/addon-actions": "^3.2.14",
     "@storybook/addon-links": "^3.2.14",
     "@storybook/addon-storyshots": "^3.2.14",
-    "@storybook/react": "^3.2.14",
+    "@storybook/react": "^3.2.16",
     "babel-eslint": "^7.2.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -60,6 +61,11 @@
   },
   "jest": {
     "coverageDirectory": "./tests/coverage",
-    "setupFiles": ["./tests/setup.js"]
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/tests/mocks/.$1.js"
+    },
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
   }
 }

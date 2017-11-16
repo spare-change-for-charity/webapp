@@ -49,6 +49,7 @@ module.exports = {
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-key': 'error',
     'react/jsx-sort-props': ['error', {callbacksLast: true, reservedFirst: true}],
+    'react/prop-types': ['error', {ignore: ['styles', 'theme']}],
     'react-with-styles/no-unused-styles': 'error',
     'react-with-styles/only-spread-css': 'error',
   },

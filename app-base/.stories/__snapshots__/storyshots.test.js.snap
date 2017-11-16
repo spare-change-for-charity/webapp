@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots atoms/Checkbox basic 1`] = `
-<span>
+<fieldset>
   <input
     checked={false}
     id="basic-random"
+    name="basic"
     onChange={[Function]}
     type="checkbox"
   />
@@ -13,7 +14,7 @@ exports[`Storyshots atoms/Checkbox basic 1`] = `
   >
     basic
   </label>
-</span>
+</fieldset>
 `;
 
 exports[`Storyshots atoms/Input basic 1`] = `
