@@ -1,10 +1,11 @@
-import {forbidExtraProps} from 'airbnb-prop-types';
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const ContentWrapper = ({content}) => {
+import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
+import {css, withStyles} from '/client/styles/withStyles';
+
+const ContentWrapper = ({content, styles}) => {
   return (
-    <div style={style}>
+    <div {...css(styles.container)}>
       {content()}
     </div>
   );
@@ -12,16 +13,16 @@ const ContentWrapper = ({content}) => {
 
 ContentWrapper.displayName = 'ContentWrapper';
 
-ContentWrapper.propTypes = forbidExtraProps({
+ContentWrapper.propTypes = propTypesHandler({
   content: PropTypes.func.isRequired,
-});
+}, true);
 
-const style = {
-  position: 'relative',
-  padding: '0 2rem',
-  maxWidth: '112rem',
-  width: '100%',
-  margin: '0 auto',
-};
-
-export default ContentWrapper;
+export default withStyles(({units}) => ({
+  container: {
+    position: 'relative',
+    padding: `0 ${units(2)}`,
+    maxWidth: units(112),
+    width: '100%',
+    margin: '0 auto',
+  },
+}))(ContentWrapper);

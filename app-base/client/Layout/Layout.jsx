@@ -1,6 +1,6 @@
-import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import React from 'react';
 
+import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import logger from '/lib/logger';
 
 import context from './context';
@@ -18,7 +18,7 @@ class Layout extends React.Component {
     };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error, info) { // eslint-disable-line class-methods-use-this
     logger.error(error);
     logger.error(info);
   }
@@ -27,10 +27,10 @@ class Layout extends React.Component {
     const {content} = this.props;
 
     return [
-      <ContentWrapper content={content} />,
+      <ContentWrapper key="contentWrapper" content={content} />,
     ];
   }
-};
+}
 
 Layout.displayName = 'Layout';
 
