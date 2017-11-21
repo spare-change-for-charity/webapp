@@ -1,2 +1,0 @@
-require('./Checkbox');
-require('./Input');

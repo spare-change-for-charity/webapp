@@ -4,8 +4,8 @@ import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 import {linkTo} from '@storybook/addon-links';
 
-import {Button, Welcome} from '@storybook/react/demo';
-
 import '/client/styles/appwide.css';
 
-require('./atoms');
+const requireAll = (requireContext) => requireContext.keys().map(requireContext);
+
+requireAll(require.context('../.stories/atoms', true, /\.jsx$/));

@@ -45,7 +45,3 @@ td {
   font-weight: normal;
   outline: none;
 }
-
-fieldset {
-  display: inline-flex;
-}
