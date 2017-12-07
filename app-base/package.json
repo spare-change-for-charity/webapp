@@ -54,10 +54,7 @@
     "eslint-plugin-react-with-styles": "^1.1.1",
     "jest": "^21.2.1",
     "raf": "^3.4.0",
-    "react-test-renderer": "^16.0.0",
-    "stylelint": "^8.0.0",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-order": "^0.6.0"
+    "react-test-renderer": "^16.0.0"
   },
   "jest": {
     "coverageDirectory": "./tests/coverage",
