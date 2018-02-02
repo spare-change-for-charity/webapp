@@ -26,8 +26,8 @@ const Column = ({children, hCentering, landscape, offset, size, styles, stylesEx
 
 Column.displayName = 'Column';
 
-const sizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 25, 75];
-Column.sizes = [...sizes, 33, 67];
+const simpleSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 25, 75];
+Column.sizes = [...simpleSizes, 33, 67]
 
 Column.propTypes = propTypesHandler({
   children: PropTypes.node,
@@ -50,6 +50,8 @@ Column.defaultProps = {
   stylesExtra: {},
 };
 
+const sizeMap = simpleSizes.reduce((object, size) => ({...object, [size]: size}), {33: 33.3333, 67: 66.6667});
+
 export default withStyles(({breakpoints}) => ({
   column: {
     display: 'block',
@@ -64,62 +66,25 @@ export default withStyles(({breakpoints}) => ({
     justifyContent: 'space-around',
   },
 
-  ...sizes.reduce((object, size) => ({
+  ...Column.sizes.reduce((object, size) => ({
     ...object,
     [`columnOffset${size}`]: {
-      marginLeft: `${size}%`,
+      marginLeft: `${sizeMap[size]}%`,
     },
     [`columnPercent${size}`]: {
-      flex: `0 0 ${size}%`,
-      maxWidth: `${size}%`,
+      flex: `0 0 ${sizeMap[size]}%`,
+      maxWidth: `${sizeMap[size]}%`,
     },
     [`columnOffsetLandscape${size}`]: {
       [breakpoints.landscape]: {
-        marginLeft: `${size}%`,
+        marginLeft: `${sizeMap[size]}%`,
       },
     },
     [`columnPercentLandscape${size}`]: {
       [breakpoints.landscape]: {
-        flex: `0 0 ${size}%`,
-        maxWidth: `${size}%`,
+        flex: `0 0 ${sizeMap[size]}%`,
+        maxWidth: `${sizeMap[size]}%`,
       },
     },
-  }), {
-    columnOffset33: {
-      marginLeft: '33.3333%',
-    },
-    columnPercent33: {
-      flex: '0 0 33.3333%',
-      maxWidth: '33.3333%',
-    },
-    columnOffsetLandscape33: {
-      [breakpoints.landscape]: {
-        marginLeft: '33.3333%',
-      },
-    },
-    columnPercentLandscape33: {
-      [breakpoints.landscape]: {
-        flex: '0 0 33.3333%',
-        maxWidth: '33.3333%',
-      },
-    },
-    columnOffset66: {
-      marginLeft: '66.6667%',
-    },
-    columnPercent66: {
-      flex: '0 0 66.6667%',
-      maxWidth: '66.6667%',
-    },
-    columnOffsetLandscape66: {
-      [breakpoints.landscape]: {
-        marginLeft: '66.6667%',
-      },
-    },
-    columnPercentLandscape66: {
-      [breakpoints.landscape]: {
-        flex: '0 0 66.6667%',
-        maxWidth: '66.6667%',
-      },
-    },
-  }),
+  }), {}),
 }))(Column);
