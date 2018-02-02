@@ -17,6 +17,943 @@ exports[`Storyshots atoms/Checkbox basic 1`] = `
 </fieldset>
 `;
 
+exports[`Storyshots atoms/Column & Row/1 column offset at 10% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset10_1ggm2bc"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    10
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 20% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset20_1kbf9p7"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    20
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 25% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset25_1dxj40u"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    25
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 30% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset30_137f2wq"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    30
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 33% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset33_pgx9h3"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    33
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 40% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset40_1v9v7rx"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    40
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 50% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset50_1e5v0zg"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    50
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 60% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset60_1i0o8db"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    60
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 67% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset67_1gjdu9i"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    67
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 70% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset70_10wo1ku"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    70
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 75% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset75_xnhegr"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    75
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 80% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset80_1xb53m9"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    80
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column offset at 90% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnOffset90_1g74wts"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Offset by 
+    90
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column with centered children 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-hCentering_wj8qr3"
+    style={Object {}}
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column with style as array 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/1 column with style as object 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 10% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent10_bph5t6"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    10
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 20% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent20_ye940a"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    20
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 25% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent25_nxfycq"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    25
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 30% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent30_1iqqmsq"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    30
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 33% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent33_iv488a"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    33
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 40% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent40_e5o7gq"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    40
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 50% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent50_1tgmy3u"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    50
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 60% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent60_h4aubu"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    60
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 67% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent67_1pigpm2"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    67
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 70% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent70_11gsd4a"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    70
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 75% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent75_6slnd6"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    75
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 80% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent80_1e03bre"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    80
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 1st at 90% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent90_u9y0fe"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    90
+    %
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={
+      Object {
+        "backgroundColor": "aqua",
+      }
+    }
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/2 column 2 column, no settings 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7"
+    style={Object {}}
+  >
+    Some text
+  </div>
+  <div
+    className="column_15bqvn7"
+    style={Object {}}
+  >
+    Some text
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 10%, landscape: 90% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent10_bph5t6-o_O-columnPercentLandscape90_xe8mqk"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    10
+    % : 
+    90
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 20%, landscape: 80% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent20_ye940a-o_O-columnPercentLandscape80_1qnbqpo"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    20
+    % : 
+    80
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 25%, landscape: 75% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent25_nxfycq-o_O-columnPercentLandscape75_8vr9a4"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    25
+    % : 
+    75
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 30%, landscape: 70% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent30_1iqqmsq-o_O-columnPercentLandscape70_18b7syk"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    30
+    % : 
+    70
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 33%, landscape: 67% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent33_iv488a-o_O-columnPercentLandscape67_zk9jw"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    33
+    % : 
+    67
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 40%, landscape: 60% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent40_e5o7gq-o_O-columnPercentLandscape60_no94qk"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    40
+    % : 
+    60
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 50%, landscape: 50% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent50_1tgmy3u-o_O-columnPercentLandscape50_gnokgs"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    50
+    % : 
+    50
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 60%, landscape: 40% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent60_h4aubu-o_O-columnPercentLandscape40_19wrofw"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    60
+    % : 
+    40
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 67%, landscape: 33% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent67_1pigpm2-o_O-columnPercentLandscape33_mo193w"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    67
+    % : 
+    33
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 70%, landscape: 30% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent70_11gsd4a-o_O-columnPercentLandscape30_16aj2sc"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    70
+    % : 
+    30
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 75%, landscape: 25% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent75_6slnd6-o_O-columnPercentLandscape25_ngsuqk"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    75
+    % : 
+    25
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 80%, landscape: 20% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent80_1e03bre-o_O-columnPercentLandscape20_lnkekc"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    80
+    % : 
+    20
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/orientation portrait: 90%, landscape: 10% 1`] = `
+<div
+  className="row_tbh8ax"
+>
+  <div
+    className="column_15bqvn7-o_O-columnPercent90_u9y0fe-o_O-columnPercentLandscape10_emzuak"
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+  >
+    90
+    % : 
+    10
+    %
+  </div>
+</div>
+`;
+
 exports[`Storyshots atoms/Input basic 1`] = `
 <input
   type="text"
