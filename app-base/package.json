@@ -10,7 +10,7 @@
     "lint:size": "meteor --settings settings/local.json --production --extra-packages bundle-visualizer",
     "test": "jest",
     "test:cover": "jest --coverage",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6060",
     "build-storybook": "build-storybook"
   },
   "repository": {
