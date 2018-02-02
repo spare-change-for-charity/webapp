@@ -1,3 +1,3 @@
-require('./Checkbox');
+require('./Checkbox.stories');
 require('./Column.stories');
-require('./Input');
+require('./Input.stories');

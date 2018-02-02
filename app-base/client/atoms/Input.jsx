@@ -8,4 +8,6 @@ class Input extends React.Component {
   }
 }
 
+Input.displayName = 'Input';
+
 export default Input;

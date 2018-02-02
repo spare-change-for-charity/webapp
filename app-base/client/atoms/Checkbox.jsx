@@ -15,7 +15,7 @@ class Checkbox extends React.Component {
 
     const {onChange} = this.props;
     if (onChange) {
-      this.setState(onChange);
+      onChange(checkbox.checked);
     }
     else {
       this.setState(state => ({checked: ! state.checked}));
@@ -23,16 +23,22 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {label} = this.props;
+    const {label, name} = this.props;
     const {checked} = this.state;
 
     return (
-      <span>
-        <input checked={checked} id={this.id} type="checkbox" onChange={this.onChangeWrapper} />
+      <fieldset>
+        <input
+          name={name}
+          checked={checked}
+          id={this.id}
+          type="checkbox"
+          onChange={this.onChangeWrapper}
+        />
         <label htmlFor={this.id}>
           {label}
         </label>
-      </span>
+      </fieldset>
     );
   }
 }
