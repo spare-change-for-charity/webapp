@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import {css, withStyles} from '/client/styles/withStyles';
@@ -22,7 +22,7 @@ Row.defaultProps = {
   vCentering: false,
 };
 
-export default withStyles(({breakpoints, units}) => ({
+export default withStyles(() => ({
   row: {
     display: 'flex',
     flexDirection: 'row',

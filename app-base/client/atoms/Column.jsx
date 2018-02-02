@@ -50,7 +50,7 @@ Column.defaultProps = {
   stylesExtra: {},
 };
 
-export default withStyles(({breakpoints, units}) => ({
+export default withStyles(({breakpoints}) => ({
   column: {
     display: 'block',
     flex: '1 1 auto',

@@ -9,23 +9,23 @@ class Form extends React.Component {
 
     const formData =
       Array.from(form.elements)
-      .filter(element => element.tagName.toLowerCase() === 'input')
-      .reduce((data, input) => {
-        const {checked, name, type} = input;
-        const value = type === 'checkbox' || type === 'radio' ? checked && input.value : input.value;
+        .filter(element => element.tagName.toLowerCase() === 'input')
+        .reduce((data, input) => {
+          const {checked, name, type} = input;
+          const value = type === 'checkbox' || type === 'radio' ? checked && input.value : input.value;
 
-        if (! value) {
-          return data[name] ? data : {...data, [name]: value};
-        }
+          if (! value) {
+            return data[name] ? data : {...data, [name]: value};
+          }
 
-        const oldValue = data[name];
-        if (type === 'checkbox' && oldValue) {
-          const arrayedValue = oldValue.constructor === String ? [oldValue, value] : [...oldValue, value];
-          return {...data, [name]: arrayedValue};
-        }
+          const oldValue = data[name];
+          if (type === 'checkbox' && oldValue) {
+            const arrayedValue = oldValue.constructor === String ? [oldValue, value] : [...oldValue, value];
+            return {...data, [name]: arrayedValue};
+          }
 
-        return {...data, [name]: value};
-      }, {});
+          return {...data, [name]: value};
+        }, {});
 
     this.props.onSubmit(formData);
   }
