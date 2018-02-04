@@ -3,34 +3,49 @@ import React from 'react';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import {css, withStyles} from '/client/styles/withStyles';
 
-const Row = ({children, vCentering, styles}) => {
-  return (
-    <div {...css(styles.row, vCentering && styles.vCentering)}>
-      {children}
-    </div>
-  );
+const Row = ({children, hCenter, vCenter, wrap, styles}) => {
+ return (
+   <div {...css(styles.row, hCenter && styles.hCenter, vCenter && styles.vCenter, wrap && styles.wrap)}>
+     {children}
+   </div>
+ );
 };
 
 Row.displayName = 'Row';
 
 Row.propTypes = propTypesHandler({
-  children: PropTypes.node.isRequired,
-  vCentering: PropTypes.bool,
+ children: PropTypes.node.isRequired,
+ hCenter: PropTypes.bool,
+ vCenter: PropTypes.bool,
+ wrap: PropTypes.bool,
 }, true);
 
 Row.defaultProps = {
-  vCentering: false,
+  hCenter: false,
+  vCenter: false,
+  wrap: false,
 };
 
-export default withStyles(() => ({
-  row: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    padding: 0,
-  },
+export default withStyles(({breakpoints, units}) => ({
+ row: {
+   display: 'flex',
+   flexDirection: 'row',
+   width: '100%',
+ },
 
-  vCentering: {
-    alignItems: 'center',
-  },
+ wrap: {
+   flexWrap: 'wrap',
+
+   '@media (orientation: landscape)': {
+     flexWrap: 'nowrap',
+   },
+ },
+
+ hCenter: {
+   justifyContent: 'space-evenly',
+ },
+
+ vCenter: {
+   alignItems: 'center',
+ },
 }))(Row);
