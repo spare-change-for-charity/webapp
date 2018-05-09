@@ -1,0 +1,13 @@
+{
+  "name": "Title",
+  "start_url": "/",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "launcher-icon-0-75x.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": 1
+    }
+  ]
+}
