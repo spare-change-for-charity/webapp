@@ -1,7 +1,7 @@
 {
   "Google": {
     "clientId": "",
-    "clientSecret": ""
+    "secret": ""
   },
   "public": {
 
