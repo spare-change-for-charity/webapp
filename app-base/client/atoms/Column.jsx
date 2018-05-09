@@ -3,14 +3,15 @@ import React from 'react';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import {css, withStyles} from '/client/styles/withStyles';
 
-const Column = ({children, hCentering, landscape, offset, size, styles, stylesExtra}) => {
+const Column = ({center, children, landscape, offset, size, styles, stylesExtra}) => {
   const cssBase = [
     styles.column,
     styles[`columnPercent${size}`],
     styles[`columnOffset${offset}`],
     landscape && styles[`columnPercentLandscape${landscape.size}`],
     landscape && styles[`columnPercentLandscape${landscape.offset}`],
-    hCentering && styles.hCentering,
+    center && center.h && styles.hCenter,
+    center && center.v && styles.vCenter,
   ];
 
   const cssWithExtras = stylesExtra.constructor === Object
@@ -30,8 +31,11 @@ const simpleSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 25, 75];
 Column.sizes = [...simpleSizes, 33, 67]
 
 Column.propTypes = propTypesHandler({
+  center: PropTypes.shape({
+    h: PropTypes.bool,
+    v: PropTypes.bool,
+  }),
   children: PropTypes.node,
-  hCentering: PropTypes.bool,
   landscape: PropTypes.shape({
     offset: PropTypes.oneOf(Column.sizes),
     size: PropTypes.oneOf(Column.sizes),
@@ -42,8 +46,11 @@ Column.propTypes = propTypesHandler({
 }, true);
 
 Column.defaultProps = {
+  center: {
+    h: false,
+    v: false,
+  },
   children: null,
-  hCentering: false,
   landscape: null,
   offset: null,
   size: null,
@@ -61,9 +68,14 @@ export default withStyles(({breakpoints}) => ({
     marginLeft: 0,
   },
 
-  hCentering: {
+  hCenter: {
     display: 'flex',
     justifyContent: 'space-around',
+  },
+
+  vCenter: {
+    display: 'flex',
+    alignItems: 'center',
   },
 
   ...Column.sizes.reduce((object, size) => ({

@@ -3,49 +3,64 @@ import React from 'react';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import {css, withStyles} from '/client/styles/withStyles';
 
-const Row = ({children, hCenter, vCenter, wrap, styles}) => {
- return (
-   <div {...css(styles.row, hCenter && styles.hCenter, vCenter && styles.vCenter, wrap && styles.wrap)}>
-     {children}
-   </div>
- );
+const Row = ({center, children, wrap, styles, stylesExtra}) => {
+  const cssBase = [
+    styles.row,
+    center && center.h && styles.hCenter,
+    center && center.v && styles.vCenter,
+    wrap && styles.wrap,
+  ];
+
+  const cssWithExtras = stylesExtra.constructor === Object
+    ? [...cssBase, stylesExtra]
+    : [...cssBase, ...stylesExtra];
+
+  return (
+    <div {...css(cssWithExtras)}>
+      {children}
+    </div>
+  );
 };
 
 Row.displayName = 'Row';
 
 Row.propTypes = propTypesHandler({
- children: PropTypes.node.isRequired,
- hCenter: PropTypes.bool,
- vCenter: PropTypes.bool,
- wrap: PropTypes.bool,
+  center: PropTypes.shape({
+    h: PropTypes.bool,
+    v: PropTypes.bool,
+  }),
+  children: PropTypes.node.isRequired,
+  wrap: PropTypes.bool,
 }, true);
 
 Row.defaultProps = {
-  hCenter: false,
-  vCenter: false,
+  center: {
+    h: false,
+    v: false,
+  },
   wrap: false,
 };
 
 export default withStyles(({breakpoints, units}) => ({
- row: {
-   display: 'flex',
-   flexDirection: 'row',
-   width: '100%',
- },
+  row: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+  },
 
- wrap: {
-   flexWrap: 'wrap',
+  wrap: {
+    flexWrap: 'wrap',
 
-   '@media (orientation: landscape)': {
-     flexWrap: 'nowrap',
-   },
- },
+    '@media (orientation: landscape)': {
+      flexWrap: 'nowrap',
+    },
+  },
 
- hCenter: {
-   justifyContent: 'space-evenly',
- },
+  hCenter: {
+    justifyContent: 'space-around',
+  },
 
- vCenter: {
-   alignItems: 'center',
- },
+  vCenter: {
+    alignItems: 'center',
+  },
 }))(Row);
