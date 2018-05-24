@@ -30,6 +30,7 @@ Row.propTypes = propTypesHandler({
     v: PropTypes.bool,
   }),
   children: PropTypes.node.isRequired,
+  stylesExtra: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
   wrap: PropTypes.bool,
 }, true);
 
@@ -38,6 +39,7 @@ Row.defaultProps = {
     h: false,
     v: false,
   },
+  stylesExtra: {},
   wrap: false,
 };
 

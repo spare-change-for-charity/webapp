@@ -3,8 +3,8 @@ const theme = {
     landscape: '@media (orientation: landscape)',
   },
   colors: {
-    black: 'rgb(0, 0, 0)',
-    white: 'rgb(255, 255, 255)',
+    black: 'hsla(0, 0%, 0%, 1)',
+    white: 'hsla(0, 0%, 100%, 1)',
   },
   fonts: {},
   units: size => `${size}rem`,
