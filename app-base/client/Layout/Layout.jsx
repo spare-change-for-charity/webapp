@@ -27,7 +27,7 @@ class Layout extends React.Component {
     const {content} = this.props;
 
     return [
-      <ContentWrapper key="contentWrapper" content={content} />,
+      <ContentWrapper key='contentWrapper' content={content} />,
     ];
   }
 }

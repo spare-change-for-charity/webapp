@@ -31,10 +31,10 @@ class Form extends React.Component {
   }
 
   render() {
-    const {children} = this.props;
+    const {children, ...rest} = this.props;
 
     return (
-      <form onSubmit={this.onSubmitWrapper}>
+      <form {...rest} onSubmit={this.onSubmitWrapper}>
         {children}
       </form>
     );

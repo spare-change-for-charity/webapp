@@ -20,7 +20,7 @@ import Row from './Row';
  *     component={SomeComponent}
  *     constantProps={constantProps}
  *     end={SomeEndComponent}
- *     keyProp="somePropName"
+ *     keyProp='somePropName'
  *     propItems={propItems}
  *   />
  *

@@ -32,7 +32,7 @@ class Checkbox extends React.Component {
           name={name}
           checked={checked}
           id={this.id}
-          type="checkbox"
+          type='checkbox'
           onChange={this.onChangeWrapper}
         />
         <label htmlFor={this.id}>

@@ -6,10 +6,10 @@ import Checkbox from '/client/atoms/Checkbox';
 const AuthPage = () => (
   <div>
     <Form onSubmit={console.log}>
-      <Checkbox name="subscribe" label="Subscribe" />
-      <input name="username" type="text" />
-      <input name="password" type="password" />
-      <button type="submit">
+      <Checkbox name='subscribe' label='Subscribe' />
+      <input name='username' type='text' />
+      <input name='password' type='password' />
+      <button type='submit'>
         Log In
       </button>
     </Form>

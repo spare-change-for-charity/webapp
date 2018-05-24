@@ -6,6 +6,6 @@ import Checkbox from '/client/atoms/Checkbox';
 
 storiesOf('atoms/Checkbox', module)
   .add('basic', () => (
-    <Checkbox name="basic" label="basic" />
+    <Checkbox name='basic' label='basic' />
   ))
 ;
