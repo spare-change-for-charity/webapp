@@ -1,9 +1,9 @@
 import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
-import {css, withStyles} from '/client/styles/withStyles';
+import withStyles from '/client/styles/withStyles';
 
-const ContentWrapper = ({content, styles}) => {
+const ContentWrapper = ({content, css, styles}) => {
   return (
     <div {...css(styles.container)}>
       {content()}

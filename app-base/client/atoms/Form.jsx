@@ -31,10 +31,10 @@ class Form extends React.Component {
   }
 
   render() {
-    const {children, ...rest} = this.props;
+    const {children, className, style} = this.props;
 
     return (
-      <form {...rest} onSubmit={this.onSubmitWrapper}>
+      <form className={className} style={style} onSubmit={this.onSubmitWrapper}>
         {children}
       </form>
     );
@@ -47,5 +47,5 @@ Form.propTypes = propTypesHandler({
   children: PropTypes.node.isRequired,
   onSubmit: PropTypes.func.isRequired,
 });
-window.farm = Form;
+
 export default Form;

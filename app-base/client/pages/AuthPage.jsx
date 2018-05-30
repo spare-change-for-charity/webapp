@@ -1,20 +1,19 @@
 import React from 'react';
 
-import Form from '/client/atoms/Form';
-import Checkbox from '/client/atoms/Checkbox';
+import {Checkbox, Form, Input} from '/client/atoms';
 
 const AuthPage = () => (
-  <div>
+  <React.Fragment>
     <Form onSubmit={console.log}>
       <Checkbox name='subscribe' label='Subscribe' />
-      <input name='username' type='text' />
-      <input name='password' type='password' />
+      <Input name='username' />
+      <Input name='password' type='password' />
       <button type='submit'>
         Log In
       </button>
     </Form>
     Auth Page
-  </div>
+  </React.Fragment>
 );
 
 AuthPage.displayName = 'AuthPage';

@@ -17,28 +17,11 @@ body {
   line-height: 1.6;
 }
 
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-fieldset,
-label,
-p,
-blockquote,
-th,
-td {
+body, div, dl, dt, dd,
+ul, ol, li, th, td,
+h1, h2, h3, h4, h5, h6,
+form, fieldset, label,
+p, pre, blockquote {
   padding: 0;
   border: none;
   margin: 0;

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
-import {css, withStyles} from '/client/styles/withStyles';
+import withStyles from '/client/styles/withStyles';
 
-const Column = ({center, children, landscape, offset, size, styles, stylesExtra}) => {
+const Column = ({center, children, landscape, offset, size, css, styles, stylesExtra}) => {
   const cssBase = [
     styles.column,
     styles[`columnPercent${size}`],

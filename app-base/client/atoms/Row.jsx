@@ -1,9 +1,9 @@
 import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
-import {css, withStyles} from '/client/styles/withStyles';
+import withStyles from '/client/styles/withStyles';
 
-const Row = ({center, children, wrap, styles, stylesExtra}) => {
+const Row = ({center, children, wrap, css, styles, stylesExtra}) => {
   const cssBase = [
     styles.row,
     center && center.h && styles.hCenter,

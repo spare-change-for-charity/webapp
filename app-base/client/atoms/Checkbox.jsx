@@ -23,11 +23,11 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {label, name} = this.props;
+    const {className, label, name} = this.props;
     const {checked} = this.state;
 
     return (
-      <fieldset>
+      <fieldset className={className}>
         <input
           name={name}
           checked={checked}
@@ -49,11 +49,13 @@ Checkbox.propTypes = propTypesHandler({
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   checked: PropTypes.bool,
+  className: PropTypes.string,
   onChange: PropTypes.func,
 });
 
 Checkbox.defaultProps = {
   checked: false,
+  className: '',
   onChange: null,
 };
 

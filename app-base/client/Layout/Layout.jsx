@@ -6,6 +6,7 @@ import logger from '/lib/logger';
 import context from './context';
 
 import ContentWrapper from './ContentWrapper';
+import NavBar from './NavBar';
 
 class Layout extends React.Component {
   static childContextTypes = {
@@ -26,9 +27,12 @@ class Layout extends React.Component {
   render() {
     const {content} = this.props;
 
-    return [
-      <ContentWrapper key='contentWrapper' content={content} />,
-    ];
+    return (
+      <React.Fragment>
+        <NavBar />
+        <ContentWrapper content={content} />
+      </React.Fragment>
+    );
   }
 }
 

@@ -3,6 +3,7 @@ import FacebookPropTypes from 'prop-types';
 
 const propTypesHandler = (propTypes, styled = false) => {
   const stylesPropTypes = {
+    css: FacebookPropTypes.func.isRequired,
     styles: FacebookPropTypes.object.isRequired,
     theme: FacebookPropTypes.object.isRequired,
   };

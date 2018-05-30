@@ -1,15 +1,28 @@
-import {css, withStyles, ThemeProvider} from 'react-with-styles';
+import {withStyles, ThemeProvider} from 'react-with-styles';
 import ThemedStyleSheet from 'react-with-styles/lib/ThemedStyleSheet';
-import aphroditeInterface from 'react-with-styles-interface-aphrodite/no-important';
+import aphroditeInterfaceFactory from 'react-with-styles-interface-aphrodite/lib/aphroditeInterfaceFactory';
+import {StyleSheet as oldStyleSheet, flushToStyleTag} from 'aphrodite/no-important';
 
 import theme from './theme';
 
-ThemedStyleSheet.registerDefaultTheme(theme);
+const descendantExtension = {
+  selectorHandler(selector, baseSelector, generateSubtreeStyles) {
+    if (selector[0] !== '^') {
+        return null;
+    }
+    return generateSubtreeStyles(`${baseSelector} ${selector.slice(1)}`);
+  },
+};
+
+const {StyleSheet, css: newCss} = oldStyleSheet.extend([descendantExtension]);
+const aphroditeInterface = aphroditeInterfaceFactory({StyleSheet, css: newCss, flushToStyleTag});
+
+ThemedStyleSheet.registerTheme(theme);
 ThemedStyleSheet.registerInterface(aphroditeInterface);
 
 export {
-  css,
-  withStyles,
   ThemeProvider,
   ThemedStyleSheet,
 };
+
+export default withStyles;
