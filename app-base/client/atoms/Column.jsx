@@ -3,8 +3,8 @@ import React from 'react';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
-const Column = ({center, children, landscape, offset, size, css, styles, stylesExtra}) => {
-  const cssBase = [
+const Column = ({children, center, landscape, offset, size, className, style, css, styles}) => {
+  const {className: innerClassName, style: innerStyle} = css(
     styles.column,
     styles[`columnPercent${size}`],
     styles[`columnOffset${offset}`],
@@ -12,14 +12,13 @@ const Column = ({center, children, landscape, offset, size, css, styles, stylesE
     landscape && styles[`columnPercentLandscape${landscape.offset}`],
     center && center.h && styles.hCenter,
     center && center.v && styles.vCenter,
-  ];
+  );
 
-  const cssWithExtras = stylesExtra.constructor === Object
-    ? [...cssBase, stylesExtra]
-    : [...cssBase, ...stylesExtra];
+  const combinedClassName = `${className} ${innerClassName}`;
+  const combinedStyle = {...innerStyle, ...style};
 
   return (
-    <div {...css(cssWithExtras)}>
+    <div className={combinedClassName} style={combinedStyle}>
       {children}
     </div>
   );
@@ -31,30 +30,32 @@ const simpleSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 25, 75];
 Column.sizes = [...simpleSizes, 33, 67]
 
 Column.propTypes = propTypesHandler({
+  children: PropTypes.node,
   center: PropTypes.shape({
     h: PropTypes.bool,
     v: PropTypes.bool,
   }),
-  children: PropTypes.node,
   landscape: PropTypes.shape({
     offset: PropTypes.oneOf(Column.sizes),
     size: PropTypes.oneOf(Column.sizes),
   }),
   offset: PropTypes.oneOf(Column.sizes),
   size: PropTypes.oneOf(Column.sizes),
-  stylesExtra: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
+  className: PropTypes.string,
+  style: PropTypes.object,
 }, true);
 
 Column.defaultProps = {
+  children: null,
   center: {
     h: false,
     v: false,
   },
-  children: null,
   landscape: null,
   offset: null,
   size: null,
-  stylesExtra: {},
+  className: '',
+  style: {},
 };
 
 const sizeMap = simpleSizes.reduce((object, size) => ({...object, [size]: size}), {33: 33.3333, 67: 66.6667});

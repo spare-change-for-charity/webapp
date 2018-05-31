@@ -2,6 +2,7 @@ import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import randomId from '/client/lib/randomId';
+import withStyles from '/client/styles/withStyles';
 
 class Input extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Input extends React.Component {
 
     const {onChange} = this.props;
     if (onChange) {
-      onChange(input.value);
+      onChange(input.value, this);
     }
     else {
       this.setState(state => ({value: input.value}));
@@ -23,21 +24,26 @@ class Input extends React.Component {
   }
 
   render() {
-    const {className, label, name, type} = this.props;
+    const {label, name, type, className, style, css, styles} = this.props;
     const {value} = this.state;
+
+    const {className: innerClassName, style: innerStyle} = css(styles.inputFieldset);
+
+    const combinedClassName = `${className} ${innerClassName}`;
+    const combinedStyle = {...innerStyle, ...style};
 
     return (
       <fieldset className={className}>
         <input
-          name={name}
-          value={value}
           id={this.id}
+          name={name}
           type={type}
-
+          value={value}
+          {...css(styles.inputArea)}
           autoComplete='off'
           onChange={this.onChangeWrapper}
         />
-        <label htmlFor={this.id}>
+        <label htmlFor={this.id} {...css(styles.inputLabel)}>
           {label}
         </label>
       </fieldset>
@@ -54,7 +60,7 @@ Input.propTypes = propTypesHandler({
   type: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
-});
+}, true);
 
 Input.defaultProps = {
   className: '',
@@ -63,4 +69,14 @@ Input.defaultProps = {
   onChange: null,
 };
 
-export default Input;
+export default withStyles(({}) => ({
+  inputFieldset: {
+
+  },
+  inputArea: {
+
+  },
+  inputLabel: {
+
+  },
+}))(Input);

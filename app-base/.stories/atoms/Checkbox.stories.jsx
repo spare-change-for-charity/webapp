@@ -4,8 +4,16 @@ import {storiesOf} from '@storybook/react';
 
 import Checkbox from '/client/atoms/Checkbox';
 
+const onChange = (checked, CheckboxComponent) => {
+  console.log(checked);
+  CheckboxComponent.setState({checked});
+};
+
 storiesOf('atoms/Checkbox', module)
-  .add('basic', () => (
-    <Checkbox name='basic' label='basic' />
+  .add('default', () => (
+    <Checkbox name='check' label='check' />
+  ))
+  .add('with onChange', () => (
+    <Checkbox name='check' label='check' onChange={onChange} />
   ))
 ;

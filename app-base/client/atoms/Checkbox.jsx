@@ -2,6 +2,7 @@ import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import randomId from '/client/lib/randomId';
+import withStyles from '/client/styles/withStyles';
 
 class Checkbox extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Checkbox extends React.Component {
 
     const {onChange} = this.props;
     if (onChange) {
-      onChange(checkbox.checked);
+      onChange(checkbox.checked, this);
     }
     else {
       this.setState(state => ({checked: ! state.checked}));
@@ -23,19 +24,24 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {className, label, name} = this.props;
+    const {label, name, className, style, css, styles} = this.props;
     const {checked} = this.state;
 
+    const {className: innerClassName, style: innerStyle} = css(styles.checkboxFieldset);
+    const combinedClassName = `${className} ${innerClassName}`;
+    const combinedStyle = {...innerStyle, ...style};
+
     return (
-      <fieldset className={className}>
+      <fieldset className={combinedClassName} style={combinedStyle}>
         <input
-          name={name}
           checked={checked}
           id={this.id}
+          name={name}
           type='checkbox'
+          {...css(styles.checkboxInput)}
           onChange={this.onChangeWrapper}
         />
-        <label htmlFor={this.id}>
+        <label htmlFor={this.id} {...css(styles.checkboxLabel)}>
           {label}
         </label>
       </fieldset>
@@ -50,13 +56,25 @@ Checkbox.propTypes = propTypesHandler({
   name: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   className: PropTypes.string,
+  style: PropTypes.object,
   onChange: PropTypes.func,
-});
+}, true);
 
 Checkbox.defaultProps = {
   checked: false,
   className: '',
+  style: {},
   onChange: null,
 };
 
-export default Checkbox;
+export default withStyles(({}) => ({
+  checkboxFieldset: {
+
+  },
+  checkboxInput: {
+
+  },
+  checkboxLabel: {
+
+  },
+}))(Checkbox);

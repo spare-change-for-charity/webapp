@@ -5,24 +5,24 @@ import {storiesOf} from '@storybook/react';
 import {Column, Row} from '/client/atoms';
 
 const oneColumnStories = storiesOf('atoms/Column & Row/1 column', module)
-  .add('with style as object', () => (
+  .add('with passthrough style', () => (
     <Row>
-      <Column stylesExtra={{backgroundColor: 'lightgrey'}}>
-        Some text
+      <Column style={{backgroundColor: 'lightgrey'}}>
+        passthrough style
       </Column>
     </Row>
   ))
-  .add('with style as array', () => (
+  .add('with passthrough className', () => (
     <Row>
-      <Column stylesExtra={[{backgroundColor: 'aqua'}]}>
-        Some text
+      <Column className='aqua'>
+        passthrough className (see inspector)
       </Column>
     </Row>
   ))
   .add('with centered children', () => (
     <Row>
-      <Column hCentering={true}>
-        Some text
+      <Column center={{h: true}}>
+        centered children
       </Column>
     </Row>
   ))
@@ -31,8 +31,8 @@ const oneColumnStories = storiesOf('atoms/Column & Row/1 column', module)
 Column.sizes.forEach(size =>
   oneColumnStories.add(`offset at ${size}%`, () => (
     <Row>
-      <Column offset={size} stylesExtra={{backgroundColor: 'lightgrey'}}>
-        Offset by {size}%
+      <Column offset={size} style={{backgroundColor: 'lightgrey'}}>
+        offset by {size}%
       </Column>
     </Row>
   ))
@@ -42,10 +42,10 @@ const twoColumnStories = storiesOf('atoms/Column & Row/2 column', module)
   .add('2 column, no settings', () => (
     <Row>
       <Column>
-        Some text
+        2 column
       </Column>
       <Column>
-        Some text
+        no settings
       </Column>
     </Row>
   ))
@@ -54,11 +54,11 @@ const twoColumnStories = storiesOf('atoms/Column & Row/2 column', module)
 Column.sizes.forEach(size =>
   twoColumnStories.add(`1st at ${size}%`, () => (
     <Row>
-      <Column size={size} stylesExtra={{backgroundColor: 'lightgrey'}}>
-        {size}%
+      <Column size={size} style={{backgroundColor: 'lightgrey'}}>
+        1st at {size}%
       </Column>
-      <Column stylesExtra={{backgroundColor: 'aqua'}}>
-        Some text
+      <Column style={{backgroundColor: 'aqua'}}>
+        no size given
       </Column>
     </Row>
   ))
@@ -69,8 +69,8 @@ const orientationStories = storiesOf('atoms/Column & Row/orientation', module);
 Column.sizes.forEach(size =>
   orientationStories.add(`portrait: ${size}%, landscape: ${100 - size}%`, () => (
     <Row>
-      <Column size={size} landscape={{size: 100 - size}} stylesExtra={{backgroundColor: 'lightgrey'}}>
-        {size}% : {100 - size}%
+      <Column size={size} landscape={{size: 100 - size}} style={{backgroundColor: 'lightgrey'}}>
+        portrait - {size}% : landscape {100 - size}%
       </Column>
     </Row>
   ))

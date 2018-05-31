@@ -1,6 +1,7 @@
 import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
+import withStyles from '/client/styles/withStyles';
 
 import Column from './Column';
 import Row from './Row';
@@ -26,7 +27,7 @@ import Row from './Row';
  *
  * The propItems array should be formatted before passing it into Grid
  */
-const Grid = ({columns: columnCount, component, constantProps, end, keyProp, propItems}) => {
+const Grid = ({columns: columnCount, component, constantProps, end, keyProp, propItems, className, style, css, styles}) => {
   const Component = component;
   const End = end;
 
@@ -42,38 +43,42 @@ const Grid = ({columns: columnCount, component, constantProps, end, keyProp, pro
   const endOnNewRow = extraColumnCount === -1;
   const extraColumns = [...Array(endOnNewRow ? columnCount - 1 : extraColumnCount).keys()];
 
+  const {className: innerClassName, style: innerStyle} = css(styles.grid);
+  const combinedClassName = `${className} ${innerClassName}`;
+  const combinedStyle = {...innerStyle, ...style};
+
   /* eslint-disable react/no-array-index-key */
   return (
-    <div>
+    <div className={combinedClassName} style={combinedStyle}>
       {rows.map((row, rowIndex) => (
-        <Row key={`row.${rowIndex}`}>
+        <Row key={`row.${rowIndex}`} {...css(styles.gridRow)}>
 
           {row.map(props => (
-            <Column key={`column.${props[keyProp]}`}>
+            <Column key={`column.${props[keyProp]}`} {...css(styles.gridColumn)}>
               <Component {...props} {...constantProps} />
             </Column>
           ))}
 
           {! endOnNewRow && rowIndex === lastRowIndex && end &&
-            <Column>
+            <Column {...css(styles.gridColumn)}>
               <End />
             </Column>
           }
 
           {! endOnNewRow && rowIndex === lastRowIndex && extraColumns.map(index =>
-            <Column key={`extraColumn.${index}`} />
+            <Column key={`extraColumn.${index}`} {...css(styles.gridColumn)} />
           )}
 
         </Row>
       ))}
 
       {endOnNewRow &&
-        <Row>
-          <Column>
+        <Row {...css(styles.gridRow)}>
+          <Column {...css(styles.gridColumn)}>
             <End />
           </Column>
           {extraColumns.map(index =>
-            <Column key={`extraColumn.${index}`} />
+            <Column key={`extraColumn.${index}`} {...css(styles.gridColumn)} />
           )}
         </Row>
       }
@@ -91,11 +96,25 @@ Grid.propTypes = propTypesHandler({
   propItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   constantProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   end: PropTypes.element,
-});
+  className: PropTypes.string,
+  style: PropTypes.object,
+}, true);
 
 Grid.defaultProps = {
   constantProps: {},
   end: null,
+  className: '',
+  style: {},
 };
 
-export default Grid;
+export default withStyles(({}) => ({
+  grid: {
+
+  },
+  gridRow: {
+
+  },
+  gridColumn: {
+
+  },
+}))(Grid);

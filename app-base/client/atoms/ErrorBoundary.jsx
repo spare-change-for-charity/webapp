@@ -4,9 +4,9 @@ import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import logger from '/lib/logger';
 
 class ErrorBoundary extends React.Component {
-  componentDidCatch(error, info) { // eslint-disable-line class-methods-use-this
-    logger.error(error);
-    logger.error(info);
+  componentDidCatch(error, info) {
+    const {fileName} = this.props;
+    logger.error({fileName, error, info});
   }
 
   render() {
@@ -18,6 +18,7 @@ ErrorBoundary.displayName = 'ErrorBoundary';
 
 ErrorBoundary.propTypes = propTypesHandler({
   children: PropTypes.node.isRequired,
+  fileName: PropTypes.string.isRequired,
 });
 
 export default ErrorBoundary;

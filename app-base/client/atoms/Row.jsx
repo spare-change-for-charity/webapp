@@ -3,20 +3,19 @@ import React from 'react';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
-const Row = ({center, children, wrap, css, styles, stylesExtra}) => {
-  const cssBase = [
+const Row = ({children, center, wrap, className, style, css, styles}) => {
+  const {className: innerClassName, style: innerStyle} = css(
     styles.row,
     center && center.h && styles.hCenter,
     center && center.v && styles.vCenter,
     wrap && styles.wrap,
-  ];
+  );
 
-  const cssWithExtras = stylesExtra.constructor === Object
-    ? [...cssBase, stylesExtra]
-    : [...cssBase, ...stylesExtra];
+  const combinedClassName = `${className} ${innerClassName}`;
+  const combinedStyle = {...innerStyle, ...style};
 
   return (
-    <div {...css(cssWithExtras)}>
+    <div className={combinedClassName} style={combinedStyle}>
       {children}
     </div>
   );
@@ -25,12 +24,13 @@ const Row = ({center, children, wrap, css, styles, stylesExtra}) => {
 Row.displayName = 'Row';
 
 Row.propTypes = propTypesHandler({
+  children: PropTypes.node.isRequired,
   center: PropTypes.shape({
     h: PropTypes.bool,
     v: PropTypes.bool,
   }),
-  children: PropTypes.node.isRequired,
-  stylesExtra: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
+  className: PropTypes.string,
+  style: PropTypes.object,
   wrap: PropTypes.bool,
 }, true);
 
@@ -39,7 +39,8 @@ Row.defaultProps = {
     h: false,
     v: false,
   },
-  stylesExtra: {},
+  className: '',
+  style: {},
   wrap: false,
 };
 

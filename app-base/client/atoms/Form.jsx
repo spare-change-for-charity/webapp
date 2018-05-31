@@ -46,6 +46,13 @@ Form.displayName = 'Form';
 Form.propTypes = propTypesHandler({
   children: PropTypes.node.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
 });
+
+Form.defaultProps = {
+  className: '',
+  style: {},
+};
 
 export default Form;
