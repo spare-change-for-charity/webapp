@@ -1,6 +1,6 @@
 import {Meteor} from 'meteor/meteor';
 
-import Users from '/lib/modules/users';
+import Users from '/lib/modules/Users';
 
 Meteor.publish(null, function () {
   if (! this.userId) {

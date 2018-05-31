@@ -1,8 +1,6 @@
 module.exports = {
   extends: 'stylelint-config-standard',
 
-  ignoreFiles: 'client/stylesheets/sitewide/milligram/*.scss',
-
   plugins: [
     'stylelint-order',
   ],

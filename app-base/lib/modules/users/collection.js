@@ -1,7 +1,7 @@
 import SimpleSchema from 'simpl-schema';
 import {Meteor} from 'meteor/meteor';
 
-import Dates from '/lib/common-schemas/Dates';
+import Dates from '/lib/commonSchemas/Dates';
 
 const Users = Meteor.users;
 

@@ -1,6 +1,6 @@
-package-lock.json
-mup.json
-node_modules
+node_modules/
+tests/coverage/
+
 .DS_Store
+package-lock.json
 *.log*
-tests/coverage

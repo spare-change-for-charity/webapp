@@ -1,7 +1,7 @@
+import {StyleSheet as oldStyleSheet, flushToStyleTag} from 'aphrodite/no-important';
 import {withStyles, ThemeProvider} from 'react-with-styles';
 import ThemedStyleSheet from 'react-with-styles/lib/ThemedStyleSheet';
 import aphroditeInterfaceFactory from 'react-with-styles-interface-aphrodite/lib/aphroditeInterfaceFactory';
-import {StyleSheet as oldStyleSheet, flushToStyleTag} from 'aphrodite/no-important';
 
 import theme from './theme';
 
@@ -14,8 +14,8 @@ const descendantExtension = {
   },
 };
 
-const {StyleSheet, css: newCss} = oldStyleSheet.extend([descendantExtension]);
-const aphroditeInterface = aphroditeInterfaceFactory({StyleSheet, css: newCss, flushToStyleTag});
+const {StyleSheet, css} = oldStyleSheet.extend([descendantExtension]);
+const aphroditeInterface = aphroditeInterfaceFactory({StyleSheet, css, flushToStyleTag});
 
 ThemedStyleSheet.registerTheme(theme);
 ThemedStyleSheet.registerInterface(aphroditeInterface);
