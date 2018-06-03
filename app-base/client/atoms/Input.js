@@ -1,5 +1,6 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import randomId from '/client/lib/randomId';
 import withStyles from '/client/styles/withStyles';
@@ -24,16 +25,14 @@ class Input extends React.Component {
   }
 
   render() {
-    const {label, name, type, className, style, css, styles} = this.props;
+    const {label, name, type} = this.props;
     const {value} = this.state;
 
-    const {className: innerClassName, style: innerStyle} = css(styles.inputFieldset);
-
-    const combinedClassName = `${className} ${innerClassName}`;
-    const combinedStyle = {...innerStyle, ...style};
+    const {css, styles} = this.props;
+    const combinedStyles = getCombinedStyles(this.props, styles.inputFieldset);
 
     return (
-      <fieldset className={className}>
+      <fieldset {...combinedStyles}>
         <input
           id={this.id}
           name={name}
@@ -69,7 +68,7 @@ Input.defaultProps = {
   onChange: null,
 };
 
-export default withStyles(({}) => ({
+Input.styles = ({}) => ({
   inputFieldset: {
 
   },
@@ -79,4 +78,6 @@ export default withStyles(({}) => ({
   inputLabel: {
 
   },
-}))(Input);
+});
+
+export default withStyles(Input.styles)(Input);

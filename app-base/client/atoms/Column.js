@@ -1,10 +1,15 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
-const Column = ({children, center, landscape, offset, size, className, style, css, styles}) => {
-  const {className: innerClassName, style: innerStyle} = css(
+const Column = (props) => {
+  const {center, landscape, offset, size} = props;
+
+  const {styles} = props;
+  const combinedStyles = getCombinedStyles(
+    props,
     styles.column,
     styles[`columnPercent${size}`],
     styles[`columnOffset${offset}`],
@@ -14,12 +19,9 @@ const Column = ({children, center, landscape, offset, size, className, style, cs
     center && center.v && styles.vCenter,
   );
 
-  const combinedClassName = `${className} ${innerClassName}`;
-  const combinedStyle = {...innerStyle, ...style};
-
   return (
-    <div className={combinedClassName} style={combinedStyle}>
-      {children}
+    <div {...combinedStyles}>
+      {props.children}
     </div>
   );
 };
@@ -60,7 +62,7 @@ Column.defaultProps = {
 
 const sizeMap = simpleSizes.reduce((object, size) => ({...object, [size]: size}), {33: 33.3333, 67: 66.6667});
 
-export default withStyles(({breakpoints}) => ({
+Column.styles = ({breakpoints}) => ({
   column: {
     display: 'block',
     flex: '1 1 auto',
@@ -100,4 +102,6 @@ export default withStyles(({breakpoints}) => ({
       },
     },
   }), {}),
-}))(Column);
+});
+
+export default withStyles(Column.styles)(Column);

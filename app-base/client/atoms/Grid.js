@@ -1,5 +1,6 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
@@ -13,7 +14,7 @@ import Row from './Row';
  *   which takes props from each item of propItems
  *   which uses keyProp as the key for each column
  *
- * Call like so
+ * Use:
  *   const propItems = [{someProp, anotherProp}, ..., {someProp, anotherProp}];
  *   const constantProps = {anotherProp, yetAnotherProp};
  *   <Grid
@@ -27,9 +28,8 @@ import Row from './Row';
  *
  * The propItems array should be formatted before passing it into Grid
  */
-const Grid = ({columns: columnCount, component, constantProps, end, keyProp, propItems, className, style, css, styles}) => {
-  const Component = component;
-  const End = end;
+const Grid = (props) => {
+  const {columns: columnCount, component: Component, keyProp, propItems, constantProps, end: End} = props;
 
   const rowCount = Math.ceil(propItems.length / columnCount);
   const rows = Array.from(Array(rowCount), (row, index) =>
@@ -43,13 +43,12 @@ const Grid = ({columns: columnCount, component, constantProps, end, keyProp, pro
   const endOnNewRow = extraColumnCount === -1;
   const extraColumns = [...Array(endOnNewRow ? columnCount - 1 : extraColumnCount).keys()];
 
-  const {className: innerClassName, style: innerStyle} = css(styles.grid);
-  const combinedClassName = `${className} ${innerClassName}`;
-  const combinedStyle = {...innerStyle, ...style};
+  const {css, styles} = props;
+  const combinedStyles = getCombinedStyles(props, styles.grid);
 
   /* eslint-disable react/no-array-index-key */
   return (
-    <div className={combinedClassName} style={combinedStyle}>
+    <div {...combinedStyles}>
       {rows.map((row, rowIndex) => (
         <Row key={`row.${rowIndex}`} {...css(styles.gridRow)}>
 
@@ -107,7 +106,7 @@ Grid.defaultProps = {
   style: {},
 };
 
-export default withStyles(({}) => ({
+Grid.styles = ({}) => ({
   grid: {
 
   },
@@ -117,4 +116,6 @@ export default withStyles(({}) => ({
   gridColumn: {
 
   },
-}))(Grid);
+});
+
+export default withStyles(Grid.styles)(Grid);

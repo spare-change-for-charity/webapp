@@ -1,13 +1,20 @@
 import React from 'react';
 
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
-import {css, withStyles} from '/client/styles/withStyles';
+import withStyles from '/client/styles/withStyles';
 
-const Logo = ({name, css, styles}) => (
-  <svg {...css(styles.logo)}>
-    <use xlinkHref={`/icons/logos.svg#${name}`} />
-  </svg>
-);
+const Logo = (props) => {
+  const {name} = props;
+
+  const {styles} = props;
+  const combinedStyles = getCombinedStyles(props, styles.logo);
+
+  return (
+    <svg {...css(styles.logo)}>
+      <use xlinkHref={`/icons/logo.svg#${name}`} />
+    </svg>
+  );
+};
 
 Logo.displayName = 'Logo';
 
@@ -19,8 +26,10 @@ Logo.defaultProps = {
 
 };
 
-export default withStyles(({colors}) => ({
+Logo.styles = ({colors}) => ({
   logo: {
 
   },
-}))(Logo);
+});
+
+export default withStyles(Logo.styles)(Logo);

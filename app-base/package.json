@@ -28,12 +28,12 @@
     "simpl-schema": "^1.5.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-actions": "^4.0.0-alpha.8",
     "@storybook/addon-console": "^1.0.0",
-    "@storybook/addon-links": "^3.4.6",
-    "@storybook/addon-storyshots": "^3.4.6",
-    "@storybook/addon-viewport": "^3.4.6",
-    "@storybook/react": "^3.4.6",
+    "@storybook/addon-links": "^4.0.0-alpha.8",
+    "@storybook/addon-storyshots": "^4.0.0-alpha.8",
+    "@storybook/addon-viewport": "^4.0.0-alpha.8",
+    "@storybook/react": "^4.0.0-alpha.8",
     "babel-eslint": "^8.2.3",
     "babel-root-slash-import": "^1.1.0",
     "enzyme": "^3.3.0",

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import randomId from '/client/lib/randomId';
 import withStyles from '/client/styles/withStyles';
@@ -24,15 +25,14 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {label, name, className, style, css, styles} = this.props;
+    const {label, name} = this.props;
     const {checked} = this.state;
 
-    const {className: innerClassName, style: innerStyle} = css(styles.checkboxFieldset);
-    const combinedClassName = `${className} ${innerClassName}`;
-    const combinedStyle = {...innerStyle, ...style};
+    const {css, styles} = this.props;
+    const combinedStyles = getCombinedStyles(this.props, styles.checkboxFieldset);
 
     return (
-      <fieldset className={combinedClassName} style={combinedStyle}>
+      <fieldset {...combinedStyles}>
         <input
           checked={checked}
           id={this.id}
@@ -67,7 +67,7 @@ Checkbox.defaultProps = {
   onChange: null,
 };
 
-export default withStyles(({}) => ({
+Checkbox.styles = ({}) => ({
   checkboxFieldset: {
 
   },
@@ -77,4 +77,6 @@ export default withStyles(({}) => ({
   checkboxLabel: {
 
   },
-}))(Checkbox);
+});
+
+export default withStyles(Checkbox.styles)(Checkbox);

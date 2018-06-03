@@ -1,22 +1,24 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
-const Row = ({children, center, wrap, className, style, css, styles}) => {
-  const {className: innerClassName, style: innerStyle} = css(
+const Row = (props) => {
+  const {center, wrap} = props;
+
+  const {styles} = props;
+  const combinedStyles = getCombinedStyles(
+    props,
     styles.row,
     center && center.h && styles.hCenter,
     center && center.v && styles.vCenter,
     wrap && styles.wrap,
   );
 
-  const combinedClassName = `${className} ${innerClassName}`;
-  const combinedStyle = {...innerStyle, ...style};
-
   return (
-    <div className={combinedClassName} style={combinedStyle}>
-      {children}
+    <div {...combinedStyles}>
+      {props.children}
     </div>
   );
 };
@@ -44,7 +46,7 @@ Row.defaultProps = {
   wrap: false,
 };
 
-export default withStyles(({breakpoints, units}) => ({
+Row.styles = ({breakpoints, units}) => ({
   row: {
     display: 'flex',
     flexDirection: 'row',
@@ -66,4 +68,6 @@ export default withStyles(({breakpoints, units}) => ({
   vCenter: {
     alignItems: 'center',
   },
-}))(Row);
+});
+
+export default withStyles(Row.styles)(Row);

@@ -1,6 +1,8 @@
 import React from 'react';
 
+import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
+import withStyles from '/client/styles/withStyles';
 
 class Form extends React.Component {
   onSubmitWrapper = (event) => {
@@ -31,11 +33,12 @@ class Form extends React.Component {
   }
 
   render() {
-    const {children, className, style} = this.props;
+    const {styles} = this.props;
+    const combinedStyles = getCombinedStyles(this.props, styles.form);
 
     return (
-      <form className={className} style={style} onSubmit={this.onSubmitWrapper}>
-        {children}
+      <form {...combinedStyles} onSubmit={this.onSubmitWrapper}>
+        {this.props.children}
       </form>
     );
   }
@@ -48,11 +51,17 @@ Form.propTypes = propTypesHandler({
   onSubmit: PropTypes.func.isRequired,
   className: PropTypes.string,
   style: PropTypes.object,
-});
+}, true);
 
 Form.defaultProps = {
   className: '',
   style: {},
 };
 
-export default Form;
+Form.styles = ({}) => ({
+  form: {
+
+  },
+});
+
+export default withStyles(Form.styles)(Form);
