@@ -57,5 +57,10 @@
     "setupFiles": [
       "./tests/setup.js"
     ]
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js"
+    }
   }
 }
