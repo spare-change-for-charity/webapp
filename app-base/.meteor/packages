@@ -29,7 +29,7 @@ alanning:roles
 mizzao:user-status
 
 # Routing
-# force-ssl
+force-ssl
 kadira:flow-router
 meteorhacks:picker
 underscore
