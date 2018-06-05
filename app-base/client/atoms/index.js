@@ -4,6 +4,7 @@ import Column from './Column';
 import ErrorBoundary from './ErrorBoundary';
 import Form from './Form';
 import Grid from './Grid';
+import Image from './Image';
 import Input from './Input';
 import Row from './Row';
 

@@ -28,10 +28,14 @@ Icon.displayName = 'Icon';
 Icon.propTypes = propTypesHandler({
   name: PropTypes.string.isRequired,
   size: PropTypes.number,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }, true);
 
 Icon.defaultProps = {
   size: 1,
+  className: '',
+  style: {},
 };
 
 Icon.usedIcons = {main, external};

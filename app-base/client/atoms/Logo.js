@@ -21,10 +21,13 @@ Logo.displayName = 'Logo';
 
 Logo.propTypes = propTypesHandler({
   name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }, true);
 
 Logo.defaultProps = {
-
+  className: '',
+  style: {},
 };
 
 Logo.styles = ({colors}) => ({

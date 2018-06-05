@@ -56,6 +56,7 @@ Input.propTypes = propTypesHandler({
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
+  style: PropTypes.object,
   type: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
@@ -63,6 +64,7 @@ Input.propTypes = propTypesHandler({
 
 Input.defaultProps = {
   className: '',
+  style: {},
   type: 'text',
   value: '',
   onChange: null,
