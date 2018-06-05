@@ -20,10 +20,10 @@ import Row from './Row';
  *   <Grid
  *     columns={3}
  *     component={SomeComponent}
- *     constantProps={constantProps}
- *     end={SomeEndComponent}
  *     keyProp='somePropName'
  *     propItems={propItems}
+ *     constantProps={constantProps}
+ *     end={SomeEndComponent}
  *   />
  *
  * The propItems array should be formatted before passing it into Grid
@@ -39,7 +39,7 @@ const Grid = (props) => {
   const lastRowIndex = rows.length - 1;
   const lastRow = rows[lastRowIndex] || [];
 
-  const extraColumnCount = columnCount - lastRow.length - (end ? 1 : 0);
+  const extraColumnCount = columnCount - lastRow.length - (End ? 1 : 0);
   const endOnNewRow = extraColumnCount === -1;
   const extraColumns = [...Array(endOnNewRow ? columnCount - 1 : extraColumnCount).keys()];
 
@@ -58,7 +58,7 @@ const Grid = (props) => {
             </Column>
           ))}
 
-          {! endOnNewRow && rowIndex === lastRowIndex && end &&
+          {! endOnNewRow && rowIndex === lastRowIndex && End &&
             <Column {...css(styles.gridColumn)}>
               <End />
             </Column>
@@ -94,7 +94,7 @@ Grid.propTypes = propTypesHandler({
   keyProp: PropTypes.string.isRequired,
   propItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   constantProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  end: PropTypes.element,
+  end: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
 }, true);
