@@ -5,7 +5,7 @@ import {storiesOf} from '@storybook/react';
 import Input from '/client/atoms/Input';
 
 storiesOf('atoms/Input', module)
-  .add('basic', () => (
+  .add('default', () => (
     <Input />
   ))
 ;
