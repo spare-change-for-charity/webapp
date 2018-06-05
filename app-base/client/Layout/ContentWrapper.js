@@ -17,7 +17,7 @@ ContentWrapper.propTypes = propTypesHandler({
   content: PropTypes.func.isRequired,
 }, true);
 
-export default withStyles(({units}) => ({
+ContentWrapper.styles = ({units}) => ({
   container: {
     position: 'relative',
     padding: `0 ${units(2)}`,
@@ -25,4 +25,6 @@ export default withStyles(({units}) => ({
     width: '100%',
     margin: '0 auto',
   },
-}))(ContentWrapper);
+});
+
+export default withStyles(ContentWrapper);

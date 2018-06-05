@@ -25,4 +25,6 @@ export {
   ThemedStyleSheet,
 };
 
-export default withStyles;
+const simpleWithStyles = (Component) => withStyles(Component.styles)(Component);
+
+export default simpleWithStyles;

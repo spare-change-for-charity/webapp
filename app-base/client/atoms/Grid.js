@@ -118,4 +118,4 @@ Grid.styles = ({}) => ({
   },
 });
 
-export default withStyles(Grid.styles)(Grid);
+export default withStyles(Grid);

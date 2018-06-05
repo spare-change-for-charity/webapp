@@ -79,4 +79,4 @@ Checkbox.styles = ({}) => ({
   },
 });
 
-export default withStyles(Checkbox.styles)(Checkbox);
+export default withStyles(Checkbox);

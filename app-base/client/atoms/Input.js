@@ -33,6 +33,9 @@ class Input extends React.Component {
 
     return (
       <fieldset {...combinedStyles}>
+        <label htmlFor={this.id} {...css(styles.inputLabel)}>
+          {label}
+        </label>
         <input
           id={this.id}
           name={name}
@@ -42,9 +45,6 @@ class Input extends React.Component {
           autoComplete='off'
           onChange={this.onChangeWrapper}
         />
-        <label htmlFor={this.id} {...css(styles.inputLabel)}>
-          {label}
-        </label>
       </fieldset>
     );
   }
@@ -80,4 +80,4 @@ Input.styles = ({}) => ({
   },
 });
 
-export default withStyles(Input.styles)(Input);
+export default withStyles(Input);

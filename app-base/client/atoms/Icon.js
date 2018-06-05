@@ -42,4 +42,4 @@ Icon.styles = ({colors}) => ({
   },
 });
 
-export default withStyles(Icon.styles)(Icon);
+export default withStyles(Icon);

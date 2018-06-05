@@ -104,4 +104,4 @@ Column.styles = ({breakpoints}) => ({
   }), {}),
 });
 
-export default withStyles(Column.styles)(Column);
+export default withStyles(Column);

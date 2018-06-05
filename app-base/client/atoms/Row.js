@@ -70,4 +70,4 @@ Row.styles = ({breakpoints, units}) => ({
   },
 });
 
-export default withStyles(Row.styles)(Row);
+export default withStyles(Row);

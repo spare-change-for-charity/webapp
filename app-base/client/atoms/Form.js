@@ -64,4 +64,4 @@ Form.styles = ({}) => ({
   },
 });
 
-export default withStyles(Form.styles)(Form);
+export default withStyles(Form);

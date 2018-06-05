@@ -21,6 +21,8 @@ NavBar.defaultProps = {
 
 };
 
-export default withStyles(({breakpoints, colors, units}) => ({
+NavBar.styles = ({breakpoints, colors, units}) => ({
 
-}))(NavBar);
+});
+
+export default withStyles(NavBar);
