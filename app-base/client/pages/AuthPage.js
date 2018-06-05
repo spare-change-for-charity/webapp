@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Checkbox, Form, Input, Row} from '/client/atoms';
+import {Button, Checkbox, Form, Input, Row} from '/client/atoms';
 
 const AuthPage = () => (
   <React.Fragment>
@@ -12,7 +12,10 @@ const AuthPage = () => (
         <Input label='Password' name='password' type='password' />
       </Row>
       <Row>
-        <Checkbox label='Subscribe' name='subscribed' />
+        <Checkbox checked={true} label='Subscribe' name='subscribed' />
+      </Row>
+      <Row>
+        <Button text='Login' />
       </Row>
     </Form>
   </React.Fragment>
