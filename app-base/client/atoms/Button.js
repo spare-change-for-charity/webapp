@@ -12,7 +12,7 @@ const Button = (props) => {
     const combinedStyles = getCombinedStyles(props, styles.link);
 
     return (
-      <a href={url} role='button' {...combinedStyles)}>
+      <a href={url} role='button' {...combinedStyles}>
         <button type='button' {...css(styles.button)} onClick={onClick}>
           {text}
         </button>
