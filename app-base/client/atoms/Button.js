@@ -14,7 +14,7 @@ const Button = (props) => {
     return (
       <a href={url} role='button' {...combinedStyles)}>
         <button type='button' {...css(styles.button)} onClick={onClick}>
-          {elementArray}
+          {text}
         </button>
       </a>
     );
