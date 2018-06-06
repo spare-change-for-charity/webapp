@@ -10,7 +10,9 @@
 const getCombinedStyles = ({css, className, style}, ...innerStyleList) => {
   const {className: innerClassName, style: innerStyle} = css(innerStyleList);
   const combinedClassName = `${className} ${innerClassName}`;
-  const combinedStyle = {...innerStyle, ...style};
+  const combinedStyle = style._definition
+    ? {...innerStyle, ...style._definition}
+    : {...innerStyle, ...style};
 
   return {
     className: combinedClassName,
