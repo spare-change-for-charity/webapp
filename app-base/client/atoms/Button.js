@@ -8,7 +8,7 @@ const Button = (props) => {
   const {text, type, url, onClick} = props;
 
   if (url) {
-    const {styles} = props;
+    const {css, styles} = props;
     const combinedStyles = getCombinedStyles(props, styles.link);
 
     return (
