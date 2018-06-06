@@ -5,7 +5,20 @@ import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
 const Button = (props) => {
-  const {text, type, onClick} = props;
+  const {text, type, url, onClick} = props;
+
+  if (url) {
+    const {styles} = props;
+    const combinedStyles = getCombinedStyles(props, styles.link);
+
+    return (
+      <a href={url} role='button' {...combinedStyles)}>
+        <button type='button' {...css(styles.button)} onClick={onClick}>
+          {elementArray}
+        </button>
+      </a>
+    );
+  }
 
   const {styles} = props;
   const combinedStyles = getCombinedStyles(props, styles.button);
@@ -24,6 +37,7 @@ Button.propTypes = propTypesHandler({
   className: PropTypes.string,
   style: PropTypes.object,
   type: PropTypes.string,
+  url: PropTypes.string,
   onClick: PropTypes.func,
 }, true);
 
@@ -31,11 +45,15 @@ Button.defaultProps = {
   className: '',
   style: {},
   type: 'submit',
+  url: '',
   onClick: null,
 };
 
 Button.styles = ({colors}) => ({
   button: {
+
+  },
+  link: {
 
   },
 });
