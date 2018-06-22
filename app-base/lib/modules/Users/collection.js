@@ -15,7 +15,7 @@ const Email = new SimpleSchema({
 }, {requiredByDefault: false});
 
 const User = new SimpleSchema({
-  emails: Email,
+  emails: [Email],
   profile: Profile,
   roles: {
     type: Array,
