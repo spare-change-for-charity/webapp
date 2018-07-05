@@ -1,3 +1,7 @@
-import Users from './collection';
+import collection from './collection';
 
-export default Users;
+import methods from './methods';
+import attachMethods from '../utility/attachMethods';
+attachMethods(collection, methods);
+
+export default collection;
