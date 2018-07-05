@@ -12,13 +12,23 @@ const getGroupedData = inputs => {
   }, {});
 };
 
+const castBooleanString = string => {
+  if (string === 'true') {
+    return true;
+  }
+  if (string === 'false') {
+    return false;
+  }
+  return string;
+};
+
 const getRadioData = inputs => {
   const radioInputs = inputs.filter(input => input.type === 'radio');
 
   return radioInputs.reduce((data, input) => {
     const {checked, name, value} = input;
     // if value exists, keep it, otherwise set it to false or value if checked
-    return data[name] ? data : {...data, [name]: checked && value};
+    return data[name] ? data : {...data, [name]: checked && castBooleanString(value)};
   }, {});
 };
 
@@ -34,7 +44,7 @@ const getCheckboxData = inputs => {
       return {...data, [name]: arrayedValue};
     }
 
-    return data[name] ? data : {...data, [name]: checked && value};
+    return data[name] ? data : {...data, [name]: checked && castBooleanString(value)};
   }, {});
 };
 
