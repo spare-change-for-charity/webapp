@@ -47,7 +47,7 @@ const getTextInputData = inputs => {
 };
 
 const getFormData = event => {
-  event.preventDefault;
+  event.preventDefault();
   const form = event.target;
 
   const inputs = Array.from(form.elements).filter(element => element.tagName.toLowerCase() === 'input');
