@@ -4,31 +4,11 @@ import getCombinedStyles from '/client/lib/getCombinedStyles';
 import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
+import getFormData from './getFormData';
+
 class Form extends React.Component {
   onSubmitWrapper = (event) => {
-    event.preventDefault();
-    const form = event.target;
-
-    const formData =
-      Array.from(form.elements)
-        .filter(element => element.tagName.toLowerCase() === 'input')
-        .reduce((data, input) => {
-          const {checked, name, type} = input;
-          const value = type === 'checkbox' || type === 'radio' ? checked && input.value : input.value;
-
-          if (! value) {
-            return data[name] ? data : {...data, [name]: value};
-          }
-
-          const oldValue = data[name];
-          if (type === 'checkbox' && oldValue) {
-            const arrayedValue = oldValue.constructor === String ? [oldValue, value] : [...oldValue, value];
-            return {...data, [name]: arrayedValue};
-          }
-
-          return {...data, [name]: value};
-        }, {});
-
+    const formData = getFormData(event);
     this.props.onSubmit(formData);
   }
 

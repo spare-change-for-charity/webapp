@@ -1,35 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots atoms/Checkbox basic 1`] = `
-<fieldset>
+exports[`Storyshots atoms/Button default 1`] = `
+<button
+  className=" button_3hmsj"
+  onClick={null}
+  style={Object {}}
+  type="submit"
+>
+  default
+</button>
+`;
+
+exports[`Storyshots atoms/Button with onClick 1`] = `
+<button
+  className=" button_3hmsj"
+  onClick={[Function]}
+  style={Object {}}
+  type="submit"
+>
+  onClick
+</button>
+`;
+
+exports[`Storyshots atoms/Button with url 1`] = `
+<a
+  className=" link_3hmsj"
+  href="about:blank"
+  role="button"
+  style={Object {}}
+>
+  <button
+    className="button_3hmsj"
+    onClick={null}
+    type="button"
+  >
+    url
+  </button>
+</a>
+`;
+
+exports[`Storyshots atoms/Checkbox default 1`] = `
+<fieldset
+  className=" checkboxFieldset_3hmsj"
+  style={Object {}}
+>
   <input
     checked={false}
-    id="basic-random"
-    name="basic"
+    className="checkboxInput_3hmsj"
+    id="check-random"
+    name="check"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    htmlFor="basic-random"
+    className="checkboxLabel_3hmsj"
+    htmlFor="check-random"
   >
-    basic
+    check
+  </label>
+</fieldset>
+`;
+
+exports[`Storyshots atoms/Checkbox with onChange 1`] = `
+<fieldset
+  className=" checkboxFieldset_3hmsj"
+  style={Object {}}
+>
+  <input
+    checked={false}
+    className="checkboxInput_3hmsj"
+    id="check-random"
+    name="check"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="checkboxLabel_3hmsj"
+    htmlFor="check-random"
+  >
+    check
   </label>
 </fieldset>
 `;
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 10% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset10_1ggm2bc"
+    className=" column_15bqvn7-o_O-columnOffset10_1ggm2bc"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     10
     %
   </div>
@@ -38,17 +105,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 10% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 20% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset20_1kbf9p7"
+    className=" column_15bqvn7-o_O-columnOffset20_1kbf9p7"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     20
     %
   </div>
@@ -57,17 +125,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 20% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 25% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset25_1dxj40u"
+    className=" column_15bqvn7-o_O-columnOffset25_1dxj40u"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     25
     %
   </div>
@@ -76,17 +145,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 25% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 30% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset30_137f2wq"
+    className=" column_15bqvn7-o_O-columnOffset30_137f2wq"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     30
     %
   </div>
@@ -95,17 +165,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 30% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 33% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset33_pgx9h3"
+    className=" column_15bqvn7-o_O-columnOffset33_pgx9h3"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     33
     %
   </div>
@@ -114,17 +185,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 33% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 40% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset40_1v9v7rx"
+    className=" column_15bqvn7-o_O-columnOffset40_1v9v7rx"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     40
     %
   </div>
@@ -133,17 +205,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 40% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 50% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset50_1e5v0zg"
+    className=" column_15bqvn7-o_O-columnOffset50_1e5v0zg"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     50
     %
   </div>
@@ -152,17 +225,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 50% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 60% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset60_1i0o8db"
+    className=" column_15bqvn7-o_O-columnOffset60_1i0o8db"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     60
     %
   </div>
@@ -171,17 +245,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 60% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 67% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset67_1gjdu9i"
+    className=" column_15bqvn7-o_O-columnOffset67_1gjdu9i"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     67
     %
   </div>
@@ -190,17 +265,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 67% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 70% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset70_10wo1ku"
+    className=" column_15bqvn7-o_O-columnOffset70_10wo1ku"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     70
     %
   </div>
@@ -209,17 +285,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 70% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 75% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset75_xnhegr"
+    className=" column_15bqvn7-o_O-columnOffset75_xnhegr"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     75
     %
   </div>
@@ -228,17 +305,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 75% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 80% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset80_1xb53m9"
+    className=" column_15bqvn7-o_O-columnOffset80_1xb53m9"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     80
     %
   </div>
@@ -247,17 +325,18 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 80% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column offset at 90% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnOffset90_1g74wts"
+    className=" column_15bqvn7-o_O-columnOffset90_1g74wts"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Offset by 
+    offset by 
     90
     %
   </div>
@@ -266,448 +345,476 @@ exports[`Storyshots atoms/Column & Row/1 column offset at 90% 1`] = `
 
 exports[`Storyshots atoms/Column & Row/1 column with centered children 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-hCentering_wj8qr3"
+    className=" column_15bqvn7-o_O-hCenter_wj8qr3"
     style={Object {}}
   >
-    Some text
+    centered children
   </div>
 </div>
 `;
 
-exports[`Storyshots atoms/Column & Row/1 column with style as array 1`] = `
+exports[`Storyshots atoms/Column & Row/1 column with passthrough className 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7"
-    style={
-      Object {
-        "backgroundColor": "aqua",
-      }
-    }
+    className="aqua column_15bqvn7"
+    style={Object {}}
   >
-    Some text
+    passthrough className (see inspector)
   </div>
 </div>
 `;
 
-exports[`Storyshots atoms/Column & Row/1 column with style as object 1`] = `
+exports[`Storyshots atoms/Column & Row/1 column with passthrough style 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
-    Some text
+    passthrough style
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 10% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent10_bph5t6"
+    className=" column_15bqvn7-o_O-columnPercent10_bph5t6"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     10
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 20% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent20_ye940a"
+    className=" column_15bqvn7-o_O-columnPercent20_ye940a"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     20
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 25% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent25_nxfycq"
+    className=" column_15bqvn7-o_O-columnPercent25_nxfycq"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     25
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 30% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent30_1iqqmsq"
+    className=" column_15bqvn7-o_O-columnPercent30_1iqqmsq"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     30
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 33% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent33_iv488a"
+    className=" column_15bqvn7-o_O-columnPercent33_iv488a"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     33
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 40% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent40_e5o7gq"
+    className=" column_15bqvn7-o_O-columnPercent40_e5o7gq"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     40
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 50% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent50_1tgmy3u"
+    className=" column_15bqvn7-o_O-columnPercent50_1tgmy3u"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     50
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 60% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent60_h4aubu"
+    className=" column_15bqvn7-o_O-columnPercent60_h4aubu"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     60
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 67% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent67_1pigpm2"
+    className=" column_15bqvn7-o_O-columnPercent67_1pigpm2"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     67
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 70% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent70_11gsd4a"
+    className=" column_15bqvn7-o_O-columnPercent70_11gsd4a"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     70
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 75% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent75_6slnd6"
+    className=" column_15bqvn7-o_O-columnPercent75_6slnd6"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     75
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 80% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent80_1e03bre"
+    className=" column_15bqvn7-o_O-columnPercent80_1e03bre"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     80
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 1st at 90% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent90_u9y0fe"
+    className=" column_15bqvn7-o_O-columnPercent90_u9y0fe"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    1st at 
     90
     %
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={
       Object {
         "backgroundColor": "aqua",
       }
     }
   >
-    Some text
+    no size given
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/2 column 2 column, no settings 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={Object {}}
   >
-    Some text
+    2 column
   </div>
   <div
-    className="column_15bqvn7"
+    className=" column_15bqvn7"
     style={Object {}}
   >
-    Some text
+    no settings
   </div>
 </div>
 `;
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 10%, landscape: 90% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent10_bph5t6-o_O-columnPercentLandscape90_xe8mqk"
+    className=" column_15bqvn7-o_O-columnPercent10_bph5t6-o_O-columnPercentLandscape90_xe8mqk"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     10
-    % : 
+    % : landscape 
     90
     %
   </div>
@@ -716,18 +823,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 10%, landscape: 90%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 20%, landscape: 80% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent20_ye940a-o_O-columnPercentLandscape80_1qnbqpo"
+    className=" column_15bqvn7-o_O-columnPercent20_ye940a-o_O-columnPercentLandscape80_1qnbqpo"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     20
-    % : 
+    % : landscape 
     80
     %
   </div>
@@ -736,18 +845,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 20%, landscape: 80%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 25%, landscape: 75% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent25_nxfycq-o_O-columnPercentLandscape75_8vr9a4"
+    className=" column_15bqvn7-o_O-columnPercent25_nxfycq-o_O-columnPercentLandscape75_8vr9a4"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     25
-    % : 
+    % : landscape 
     75
     %
   </div>
@@ -756,18 +867,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 25%, landscape: 75%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 30%, landscape: 70% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent30_1iqqmsq-o_O-columnPercentLandscape70_18b7syk"
+    className=" column_15bqvn7-o_O-columnPercent30_1iqqmsq-o_O-columnPercentLandscape70_18b7syk"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     30
-    % : 
+    % : landscape 
     70
     %
   </div>
@@ -776,18 +889,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 30%, landscape: 70%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 33%, landscape: 67% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent33_iv488a-o_O-columnPercentLandscape67_zk9jw"
+    className=" column_15bqvn7-o_O-columnPercent33_iv488a-o_O-columnPercentLandscape67_zk9jw"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     33
-    % : 
+    % : landscape 
     67
     %
   </div>
@@ -796,18 +911,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 33%, landscape: 67%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 40%, landscape: 60% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent40_e5o7gq-o_O-columnPercentLandscape60_no94qk"
+    className=" column_15bqvn7-o_O-columnPercent40_e5o7gq-o_O-columnPercentLandscape60_no94qk"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     40
-    % : 
+    % : landscape 
     60
     %
   </div>
@@ -816,18 +933,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 40%, landscape: 60%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 50%, landscape: 50% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent50_1tgmy3u-o_O-columnPercentLandscape50_gnokgs"
+    className=" column_15bqvn7-o_O-columnPercent50_1tgmy3u-o_O-columnPercentLandscape50_gnokgs"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     50
-    % : 
+    % : landscape 
     50
     %
   </div>
@@ -836,18 +955,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 50%, landscape: 50%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 60%, landscape: 40% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent60_h4aubu-o_O-columnPercentLandscape40_19wrofw"
+    className=" column_15bqvn7-o_O-columnPercent60_h4aubu-o_O-columnPercentLandscape40_19wrofw"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     60
-    % : 
+    % : landscape 
     40
     %
   </div>
@@ -856,18 +977,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 60%, landscape: 40%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 67%, landscape: 33% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent67_1pigpm2-o_O-columnPercentLandscape33_mo193w"
+    className=" column_15bqvn7-o_O-columnPercent67_1pigpm2-o_O-columnPercentLandscape33_mo193w"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     67
-    % : 
+    % : landscape 
     33
     %
   </div>
@@ -876,18 +999,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 67%, landscape: 33%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 70%, landscape: 30% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent70_11gsd4a-o_O-columnPercentLandscape30_16aj2sc"
+    className=" column_15bqvn7-o_O-columnPercent70_11gsd4a-o_O-columnPercentLandscape30_16aj2sc"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     70
-    % : 
+    % : landscape 
     30
     %
   </div>
@@ -896,18 +1021,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 70%, landscape: 30%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 75%, landscape: 25% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent75_6slnd6-o_O-columnPercentLandscape25_ngsuqk"
+    className=" column_15bqvn7-o_O-columnPercent75_6slnd6-o_O-columnPercentLandscape25_ngsuqk"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     75
-    % : 
+    % : landscape 
     25
     %
   </div>
@@ -916,18 +1043,20 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 75%, landscape: 25%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 80%, landscape: 20% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent80_1e03bre-o_O-columnPercentLandscape20_lnkekc"
+    className=" column_15bqvn7-o_O-columnPercent80_1e03bre-o_O-columnPercentLandscape20_lnkekc"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     80
-    % : 
+    % : landscape 
     20
     %
   </div>
@@ -936,26 +1065,568 @@ exports[`Storyshots atoms/Column & Row/orientation portrait: 80%, landscape: 20%
 
 exports[`Storyshots atoms/Column & Row/orientation portrait: 90%, landscape: 10% 1`] = `
 <div
-  className="row_tbh8ax"
+  className=" row_xsb9xa"
+  style={Object {}}
 >
   <div
-    className="column_15bqvn7-o_O-columnPercent90_u9y0fe-o_O-columnPercentLandscape10_emzuak"
+    className=" column_15bqvn7-o_O-columnPercent90_u9y0fe-o_O-columnPercentLandscape10_emzuak"
     style={
       Object {
         "backgroundColor": "lightgrey",
       }
     }
   >
+    portrait - 
     90
-    % : 
+    % : landscape 
     10
     %
   </div>
 </div>
 `;
 
-exports[`Storyshots atoms/Input basic 1`] = `
-<input
-  type="text"
-/>
+exports[`Storyshots atoms/Column & Row/row only default 1`] = `
+<div
+  className=" row_xsb9xa"
+  style={Object {}}
+>
+  row only
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/row only with passthrough className 1`] = `
+<div
+  className="aqua row_xsb9xa"
+  style={Object {}}
+>
+  passthrough className (see inspector)
+</div>
+`;
+
+exports[`Storyshots atoms/Column & Row/row only with passthrough style 1`] = `
+<div
+  className=" row_xsb9xa"
+  style={
+    Object {
+      "backgroundColor": "lightgrey",
+    }
+  }
+>
+  passthrough style
+</div>
+`;
+
+exports[`Storyshots atoms/Form default 1`] = `
+<form
+  className=" form_3hmsj"
+  onSubmit={[Function]}
+  style={Object {}}
+>
+  <fieldset
+    className=" inputFieldset_3hmsj"
+    style={Object {}}
+  >
+    <label
+      className="inputLabel_3hmsj"
+      htmlFor="name-random"
+    >
+      Name
+    </label>
+    <input
+      autoComplete="off"
+      className="inputArea_3hmsj"
+      id="name-random"
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </fieldset>
+  <button
+    className=" button_3hmsj"
+    onClick={null}
+    style={Object {}}
+    type="submit"
+  >
+    submit
+  </button>
+</form>
+`;
+
+exports[`Storyshots atoms/Grid default 1`] = `
+<div
+  className=" grid_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        B
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        C
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        D
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        E
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        F
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        G
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        H
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Grid with End 1`] = `
+<div
+  className=" grid_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        B
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        C
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        D
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        E
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        F
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        G
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        H
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        End
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Grid with End on new row 1`] = `
+<div
+  className=" grid_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        B
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        C
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        D
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        E
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        F
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        G
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        H
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        End
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    />
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    />
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Grid with constantProps 1`] = `
+<div
+  className=" grid_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+  </div>
+  <div
+    className="gridRow_3hmsj row_xsb9xa"
+    style={Object {}}
+  >
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    >
+      <div>
+        A
+      </div>
+    </div>
+    <div
+      className="gridColumn_3hmsj column_15bqvn7"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Image large 1`] = `
+<div
+  className="imageloader imageloader-loading  loaderWrapper_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="loadingIcon_3hmsj loadingIcon_3hmsj"
+    style={Object {}}
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Image small 1`] = `
+<div
+  className="imageloader imageloader-loading  loaderWrapper_3hmsj"
+  style={Object {}}
+>
+  <div
+    className="loadingIcon_3hmsj loadingIcon_3hmsj"
+    style={Object {}}
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/Input default 1`] = `
+<fieldset
+  className=" inputFieldset_3hmsj"
+  style={Object {}}
+>
+  <label
+    className="inputLabel_3hmsj"
+    htmlFor="default-random"
+  >
+    Default
+  </label>
+  <input
+    autoComplete="off"
+    className="inputArea_3hmsj"
+    id="default-random"
+    name="default"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+</fieldset>
+`;
+
+exports[`Storyshots atoms/Input with onChange 1`] = `
+<fieldset
+  className=" inputFieldset_3hmsj"
+  style={Object {}}
+>
+  <label
+    className="inputLabel_3hmsj"
+    htmlFor="onChange-random"
+  >
+    onChange
+  </label>
+  <input
+    autoComplete="off"
+    className="inputArea_3hmsj"
+    id="onChange-random"
+    name="onChange"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+</fieldset>
+`;
+
+exports[`Storyshots atoms/LoadingIcon default 1`] = `
+<div
+  className=" loadingIcon_3hmsj"
+  style={Object {}}
+>
+  Loading...
+</div>
+`;
+
+exports[`Storyshots atoms/Logo default 1`] = `
+<svg
+  className=" logo_3hmsj"
+  style={Object {}}
+>
+  <use
+    xlinkHref="/icons/logo.svg#square"
+  />
+</svg>
 `;

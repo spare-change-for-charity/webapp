@@ -13,6 +13,19 @@ test('onSubmitWrapper, 1 value', () => {
   expect(getData).toBeCalledWith({text: 'value'});
 });
 
+test('onSubmitWrapper, grouped data', () => {
+  const getData = jest.fn();
+  const form = mount(
+    <Form onSubmit={getData}>
+      <input name="address.line1" defaultValue="l1Value" type="text" />
+      <input name="address.line2" defaultValue="l2Value" type="text" />
+      <input name="address.city" defaultValue="cityValue" type="text" />
+    </Form>
+  );
+  form.find('form').simulate('submit');
+  expect(getData).toBeCalledWith({address: {line1: 'l1Value', line2: 'l2Value', city: 'cityValue'}});
+});
+
 test('onSubmitWrapper, checkboxes with none selected', () => {
   const getData = jest.fn();
   const form = mount(

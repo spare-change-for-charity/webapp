@@ -14,6 +14,6 @@ storiesOf('atoms/Button', module)
     <Button text='onClick' onClick={onClick} />
   ))
   .add('with url', () => (
-    <Button text='url' url={window.location} />
+    <Button text='url' url={window.location.href} />
   ))
 ;

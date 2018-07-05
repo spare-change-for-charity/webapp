@@ -5,8 +5,6 @@ jest.mock('../client/lib/randomId', () =>
   string => `${string}-random`
 );
 
-beforeEach(() => {
-  StyleSheetTestUtils.suppressStyleInjection();
-});
+StyleSheetTestUtils.suppressStyleInjection();
 
 initStoryshots();
