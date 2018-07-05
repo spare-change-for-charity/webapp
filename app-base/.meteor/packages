@@ -33,3 +33,4 @@ force-ssl
 kadira:flow-router
 meteorhacks:picker
 underscore
+mdg:validated-method
