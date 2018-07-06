@@ -25,7 +25,7 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {label, name} = this.props;
+    const {label, name, value} = this.props;
     const {checked} = this.state;
 
     const {css, styles} = this.props;
@@ -38,6 +38,7 @@ class Checkbox extends React.Component {
           id={this.id}
           name={name}
           type='checkbox'
+          value={value}
           {...css(styles.checkboxInput)}
           onChange={this.onChangeWrapper}
         />
@@ -54,6 +55,7 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = propTypesHandler({
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]).isRequired,
   checked: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,

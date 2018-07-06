@@ -53,7 +53,10 @@ const getTextInputData = inputs => {
     ! (input.name.includes('.') || input.type === 'checkbox' || input.type === 'radio')
   );
 
-  return textInputs.reduce((data, input) => ({...data, [input.name]: input.value}), {});
+  return textInputs.reduce((data, input) => ({
+    ...data,
+    [input.name]: input.type === 'number' ? Number(input.value) : input.value,
+  }), {});
 };
 
 const getFormData = event => {
