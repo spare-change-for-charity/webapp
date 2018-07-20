@@ -5,7 +5,7 @@ import withStyles from '/client/styles/withStyles';
 
 const NavBar = ({css, styles}) => {
   return (
-    <nav>
+    <nav {...css(styles.nav)}>
       NavBar
     </nav>
   );
@@ -21,8 +21,10 @@ NavBar.defaultProps = {
 
 };
 
-NavBar.styles = ({breakpoints, colors, units}) => ({
+NavBar.styles = () => ({
+  nav: {
 
+  },
 });
 
 export default withStyles(NavBar);
