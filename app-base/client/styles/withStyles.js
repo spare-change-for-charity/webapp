@@ -8,7 +8,7 @@ import theme from './theme';
 const descendantExtension = {
   selectorHandler(selector, baseSelector, generateSubtreeStyles) {
     if (selector[0] !== '^') {
-        return null;
+      return null;
     }
     return generateSubtreeStyles(`${baseSelector} ${selector.slice(1)}`);
   },
@@ -25,6 +25,6 @@ export {
   ThemedStyleSheet,
 };
 
-const simpleWithStyles = (Component) => withStyles(Component.styles)(Component);
+const simpleWithStyles = Component => withStyles(Component.styles)(Component);
 
 export default simpleWithStyles;

@@ -2,9 +2,13 @@ import React from 'react';
 
 import {Button, Checkbox, Form, Input, Row} from '/client/atoms';
 
+const login = (formData) => {
+  return formData;
+};
+
 const AuthPage = () => (
   <React.Fragment>
-    <Form onSubmit={console.log}>
+    <Form onSubmit={login}>
       <Row>
         <Input label='Username' name='username' />
       </Row>

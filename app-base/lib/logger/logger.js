@@ -9,7 +9,7 @@ const logger = {
       console.group('stack');
       console.error(stack);
       console.groupEnd();
-      
+
       if (info) {
         const {componentStack} = info;
         console.info(componentStack);

@@ -40,7 +40,7 @@ Icon.defaultProps = {
 
 Icon.usedIcons = {main, external};
 
-Icon.styles = ({colors}) => ({
+Icon.styles = () => ({
   icon: {
 
   },

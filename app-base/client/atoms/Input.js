@@ -6,11 +6,8 @@ import randomId from '/client/lib/randomId';
 import withStyles from '/client/styles/withStyles';
 
 class Input extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = randomId(props.name);
-    this.state = {value: props.value};
-  }
+  id = randomId(this.props.name);
+  state = {value: this.props.value};
 
   onChangeWrapper = (event) => {
     const input = event.target;
@@ -20,7 +17,7 @@ class Input extends React.Component {
       onChange(input.value, this);
     }
     else {
-      this.setState(state => ({value: input.value}));
+      this.setState(() => ({value: input.value}));
     }
   }
 
@@ -70,7 +67,7 @@ Input.defaultProps = {
   onChange: null,
 };
 
-Input.styles = ({}) => ({
+Input.styles = () => ({
   inputFieldset: {
 
   },

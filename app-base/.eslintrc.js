@@ -34,7 +34,7 @@ module.exports = {
       objects: 'always-multiline',
       imports: 'always-multiline',
       exports: 'always-multiline',
-      functions: 'ignore',
+      functions: 'only-multiline',
     }],
     'consistent-return': 'off',
     'max-len': ['error', 120],
@@ -45,13 +45,29 @@ module.exports = {
     'space-unary-ops': ['error', {words: true, nonwords: true, overrides: {'-': false}}],
     'import/extensions': ['error', {js: 'never', jsx: 'never'}],
     'jsx-a11y/aria-role': ['error', {ignoreNonDOM: true}],
+    'jsx-a11y/label-has-for': 'off',
+    'jsx-quotes': ['error', 'prefer-single'],
     'react/display-name': ['error', {ignoreTranspilerName: true}],
+    'react/jsx-filename-extension': ['error', {extensions: ['.js']}],
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-key': 'error',
     'react/jsx-sort-props': ['error', {callbacksLast: true, reservedFirst: true}],
-    'react/prop-types': ['error', {ignore: ['styles', 'theme']}],
+    'react/prop-types': ['error', {ignore: ['css', 'styles', 'theme']}],
+    'react/sort-comp': ['error', {
+      order: [
+        'static-methods',
+        'everything-else',
+        'lifecycle',
+        '/^on.+$/',
+        'render',
+      ]
+    }],
     'react-with-styles/no-unused-styles': 'error',
     'react-with-styles/only-spread-css': 'error',
+
+    'react/forbid-prop-types': 'off',
+
+    'function-paren-newline': ['error', 'consistent'],
   },
 
   settings: {

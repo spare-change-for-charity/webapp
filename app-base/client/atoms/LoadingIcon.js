@@ -27,7 +27,7 @@ LoadingIcon.defaultProps = {
   style: {},
 };
 
-LoadingIcon.styles = ({}) => ({
+LoadingIcon.styles = () => ({
   loadingIcon: {
 
   },

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
+import propTypesHandler from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
 const NavBar = ({css, styles}) => {

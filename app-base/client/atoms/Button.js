@@ -5,7 +5,9 @@ import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
 const Button = (props) => {
-  const {text, type, url, onClick} = props;
+  const {
+    text, type, url, onClick,
+  } = props;
 
   if (url) {
     const {css, styles} = props;
@@ -49,7 +51,7 @@ Button.defaultProps = {
   onClick: null,
 };
 
-Button.styles = ({colors}) => ({
+Button.styles = () => ({
   button: {
 
   },

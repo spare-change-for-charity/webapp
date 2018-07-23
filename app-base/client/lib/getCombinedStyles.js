@@ -8,10 +8,11 @@
  *   <SomeComponent {...combinedStyles} />
  */
 const getCombinedStyles = ({css, className, style}, ...innerStyleList) => {
+  // eslint-disable-next-line react-with-styles/only-spread-css
   const {className: innerClassName, style: innerStyle} = css(innerStyleList);
   const combinedClassName = `${className} ${innerClassName}`;
-  const combinedStyle = style._definition
-    ? {...innerStyle, ...style._definition}
+  const combinedStyle = style._definition // eslint-disable-line no-underscore-dangle
+    ? {...innerStyle, ...style._definition} // eslint-disable-line no-underscore-dangle
     : {...innerStyle, ...style};
 
   return {

@@ -16,7 +16,7 @@ const Image = (props) => {
 
   return (
     <ImageLoader src={url} wrapperProps={wrapperProps} {...combinedStyles}>
-      <img {...css(styles.image)} />
+      <img {...css(styles.image)} alt={alt} />
       <div {...css(styles.error)}>
         The image failed to load
         {alt && `with alt text: ${alt}`}
@@ -41,7 +41,7 @@ Image.defaultProps = {
   style: {},
 };
 
-Image.styles = ({}) => ({
+Image.styles = () => ({
   loaderWrapper: {
 
   },

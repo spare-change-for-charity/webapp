@@ -11,9 +11,9 @@ const onChange = (checked, CheckboxComponent) => {
 
 storiesOf('atoms/Checkbox', module)
   .add('default', () => (
-    <Checkbox name='check' label='check' />
+    <Checkbox name='check' label='check' value='check' />
   ))
   .add('with onChange', () => (
-    <Checkbox name='check' label='check' onChange={onChange} />
+    <Checkbox name='check' label='check' value='check' onChange={onChange} />
   ))
 ;

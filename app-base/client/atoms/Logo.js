@@ -30,7 +30,7 @@ Logo.defaultProps = {
   style: {},
 };
 
-Logo.styles = ({colors}) => ({
+Logo.styles = () => ({
   logo: {
 
   },

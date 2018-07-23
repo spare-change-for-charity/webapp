@@ -46,7 +46,7 @@ Row.defaultProps = {
   wrap: false,
 };
 
-Row.styles = ({breakpoints, units}) => ({
+Row.styles = () => ({
   row: {
     display: 'flex',
     flexDirection: 'row',

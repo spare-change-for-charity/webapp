@@ -1,4 +1,4 @@
-const getGroupedData = inputs => {
+const getGroupedData = (inputs) => {
   const inputDotGroups = inputs.filter(input => input.name.includes('.'));
 
   return inputDotGroups.reduce((data, input) => {
@@ -12,7 +12,7 @@ const getGroupedData = inputs => {
   }, {});
 };
 
-const castBooleanString = string => {
+const castBooleanString = (string) => {
   if (string === 'true') {
     return true;
   }
@@ -22,7 +22,7 @@ const castBooleanString = string => {
   return string;
 };
 
-const getRadioData = inputs => {
+const getRadioData = (inputs) => {
   const radioInputs = inputs.filter(input => input.type === 'radio');
 
   return radioInputs.reduce((data, input) => {
@@ -32,7 +32,7 @@ const getRadioData = inputs => {
   }, {});
 };
 
-const getCheckboxData = inputs => {
+const getCheckboxData = (inputs) => {
   const checkboxInputs = inputs.filter(input => input.type === 'checkbox');
 
   return checkboxInputs.reduce((data, input) => {
@@ -48,10 +48,10 @@ const getCheckboxData = inputs => {
   }, {});
 };
 
-const getTextInputData = inputs => {
-  const textInputs = inputs.filter(input =>
+const getTextInputData = (inputs) => {
+  const textInputs = inputs.filter(input => (
     ! (input.name.includes('.') || input.type === 'checkbox' || input.type === 'radio')
-  );
+  ));
 
   return textInputs.reduce((data, input) => ({
     ...data,
@@ -59,7 +59,7 @@ const getTextInputData = inputs => {
   }), {});
 };
 
-const getFormData = event => {
+const getFormData = (event) => {
   event.preventDefault();
   const form = event.target;
 

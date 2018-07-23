@@ -69,7 +69,7 @@ Checkbox.defaultProps = {
   onChange: null,
 };
 
-Checkbox.styles = ({}) => ({
+Checkbox.styles = () => ({
   checkboxFieldset: {
 
   },

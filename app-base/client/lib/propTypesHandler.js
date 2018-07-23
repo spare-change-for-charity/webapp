@@ -11,6 +11,7 @@ const propTypesHandler = (propTypes, styled = false) => {
   return AirbnbPropTypes.forbidExtraProps({
     ...propTypes,
     ...(styled && stylesPropTypes),
+    meteorPackages: PropTypes.object,
   });
 };
 
@@ -19,8 +20,5 @@ const PropTypes = {
   ...FacebookPropTypes,
 };
 
-export {
-  PropTypes,
-};
-
+export {PropTypes};
 export default propTypesHandler;

@@ -51,6 +51,7 @@ exports[`Storyshots atoms/Checkbox default 1`] = `
     name="check"
     onChange={[Function]}
     type="checkbox"
+    value="check"
   />
   <label
     className="checkboxLabel_3hmsj"
@@ -73,6 +74,7 @@ exports[`Storyshots atoms/Checkbox with onChange 1`] = `
     name="check"
     onChange={[Function]}
     type="checkbox"
+    value="check"
   />
   <label
     className="checkboxLabel_3hmsj"

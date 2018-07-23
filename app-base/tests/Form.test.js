@@ -6,7 +6,7 @@ test('onSubmitWrapper, 1 value', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="text" defaultValue="value" type="text" />
+      <input name='text' readOnly={true} type='text' value='value' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -17,9 +17,9 @@ test('onSubmitWrapper, grouped data', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="address.line1" defaultValue="l1Value" type="text" />
-      <input name="address.line2" defaultValue="l2Value" type="text" />
-      <input name="address.city" defaultValue="cityValue" type="text" />
+      <input name='address.line1' readOnly={true} type='text' value='l1Value' />
+      <input name='address.line2' readOnly={true} type='text' value='l2Value' />
+      <input name='address.city' readOnly={true} type='text' value='cityValue' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -30,9 +30,9 @@ test('onSubmitWrapper, checkboxes with none selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="checkGroup" value="check1" type="checkbox" />
-      <input name="checkGroup" value="check2" type="checkbox" />
-      <input name="checkGroup" value="check3" type="checkbox" />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check1' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check2' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -43,9 +43,9 @@ test('onSubmitWrapper, checkboxes with 1st selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="checkGroup" value="check1" type="checkbox" defaultChecked={true} />
-      <input name="checkGroup" value="check2" type="checkbox" />
-      <input name="checkGroup" value="check3" type="checkbox" />
+      <input checked={true} name='checkGroup' readOnly={true} type='checkbox' value='check1' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check2' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -56,9 +56,9 @@ test('onSubmitWrapper, checkboxes with 2nd selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="checkGroup" value="check1" type="checkbox" />
-      <input name="checkGroup" value="check2" type="checkbox" defaultChecked={true} />
-      <input name="checkGroup" value="check3" type="checkbox" />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check1' />
+      <input checked={true} name='checkGroup' readOnly={true} type='checkbox' value='check2' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -69,9 +69,9 @@ test('onSubmitWrapper, checkboxes with 1st and 2nd selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="checkGroup" value="check1" type="checkbox" defaultChecked={true} />
-      <input name="checkGroup" value="check2" type="checkbox" defaultChecked={true} />
-      <input name="checkGroup" value="check3" type="checkbox" />
+      <input checked={true} name='checkGroup' readOnly={true} type='checkbox' value='check1' />
+      <input checked={true} name='checkGroup' readOnly={true} type='checkbox' value='check2' />
+      <input name='checkGroup' readOnly={true} type='checkbox' value='check3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -82,9 +82,9 @@ test('onSubmitWrapper, radio group with none selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="radioGroup" value="radio1" type="radio" />
-      <input name="radioGroup" value="radio2" type="radio" />
-      <input name="radioGroup" value="radio3" type="radio" />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio1' />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio2' />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -95,9 +95,9 @@ test('onSubmitWrapper, radio group with 1st selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="radioGroup" value="radio1" type="radio" defaultChecked={true} />
-      <input name="radioGroup" value="radio2" type="radio" />
-      <input name="radioGroup" value="radio3" type="radio" />
+      <input checked={true} name='radioGroup' readOnly={true} type='radio' value='radio1' />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio2' />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio3' />
     </Form>
   );
   form.find('form').simulate('submit');
@@ -108,9 +108,9 @@ test('onSubmitWrapper, radio group with 2nd selected', () => {
   const getData = jest.fn();
   const form = mount(
     <Form onSubmit={getData}>
-      <input name="radioGroup" value="radio1" type="radio" />
-      <input name="radioGroup" value="radio2" type="radio" defaultChecked={true} />
-      <input name="radioGroup" value="radio3" type="radio" />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio1' />
+      <input checked={true} name='radioGroup' readOnly={true} type='radio' value='radio2' />
+      <input name='radioGroup' readOnly={true} type='radio' value='radio3' />
     </Form>
   );
   form.find('form').simulate('submit');

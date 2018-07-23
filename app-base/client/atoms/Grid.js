@@ -29,12 +29,19 @@ import Row from './Row';
  * The propItems array should be formatted before passing it into Grid
  */
 const Grid = (props) => {
-  const {columns: columnCount, component: Component, keyProp, propItems, constantProps, end: End} = props;
+  const {
+    columns: columnCount,
+    component: Component,
+    keyProp,
+    propItems,
+    constantProps,
+    end: End,
+  } = props;
 
   const rowCount = Math.ceil(propItems.length / columnCount);
-  const rows = Array.from(Array(rowCount), (row, index) =>
+  const rows = Array.from(Array(rowCount), (row, index) => (
     propItems.slice(index * columnCount, (index * columnCount) + columnCount)
-  );
+  ));
 
   const lastRowIndex = rows.length - 1;
   const lastRow = rows[lastRowIndex] || [];
@@ -52,9 +59,9 @@ const Grid = (props) => {
       {rows.map((row, rowIndex) => (
         <Row key={`row.${rowIndex}`} {...css(styles.gridRow)}>
 
-          {row.map(props => (
-            <Column key={`column.${props[keyProp]}`} {...css(styles.gridColumn)}>
-              <Component {...props} {...constantProps} />
+          {row.map(propItem => (
+            <Column key={`column.${propItem[keyProp]}`} {...css(styles.gridColumn)}>
+              <Component {...propItem} {...constantProps} />
             </Column>
           ))}
 
@@ -64,9 +71,9 @@ const Grid = (props) => {
             </Column>
           }
 
-          {! endOnNewRow && rowIndex === lastRowIndex && extraColumns.map(index =>
+          {! endOnNewRow && rowIndex === lastRowIndex && extraColumns.map(index => (
             <Column key={`extraColumn.${index}`} {...css(styles.gridColumn)} />
-          )}
+          ))}
 
         </Row>
       ))}
@@ -76,9 +83,9 @@ const Grid = (props) => {
           <Column {...css(styles.gridColumn)}>
             <End />
           </Column>
-          {extraColumns.map(index =>
+          {extraColumns.map(index => (
             <Column key={`extraColumn.${index}`} {...css(styles.gridColumn)} />
-          )}
+          ))}
         </Row>
       }
     </div>
@@ -106,7 +113,7 @@ Grid.defaultProps = {
   style: {},
 };
 
-Grid.styles = ({}) => ({
+Grid.styles = () => ({
   grid: {
 
   },

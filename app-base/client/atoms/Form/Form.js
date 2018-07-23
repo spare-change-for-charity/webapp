@@ -38,7 +38,7 @@ Form.defaultProps = {
   style: {},
 };
 
-Form.styles = ({}) => ({
+Form.styles = () => ({
   form: {
 
   },

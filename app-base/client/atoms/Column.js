@@ -5,7 +5,9 @@ import propTypesHandler, {PropTypes} from '/client/lib/propTypesHandler';
 import withStyles from '/client/styles/withStyles';
 
 const Column = (props) => {
-  const {center, landscape, offset, size} = props;
+  const {
+    center, landscape, offset, size,
+  } = props;
 
   const {styles} = props;
   const combinedStyles = getCombinedStyles(
@@ -29,7 +31,7 @@ const Column = (props) => {
 Column.displayName = 'Column';
 
 const simpleSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 25, 75];
-Column.sizes = [...simpleSizes, 33, 67]
+Column.sizes = [...simpleSizes, 33, 67];
 
 Column.propTypes = propTypesHandler({
   children: PropTypes.node,
