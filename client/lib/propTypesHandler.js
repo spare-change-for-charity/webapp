@@ -18,6 +18,8 @@ const propTypesHandler = (propTypes, styled = false) => {
 const PropTypes = {
   ...AirbnbPropTypes,
   ...FacebookPropTypes,
+  date: PropTypes.instanceOf(Date),
+  orNull: (...propTypes) => AirbnbPropTypes.or([...propTypes, AirbnbPropTypes.explicitNull()]),
 };
 
 export {PropTypes};
