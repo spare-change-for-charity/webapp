@@ -1,7 +1,8 @@
 {
-  "name": "",
-  "author": "",
+  "name": "Spare - Change for Charity",
+  "author": "Merlin Patterson",
   "private": true,
+  "license" : "SEE LICENSE IN LICENSE.md",
   "scripts": {
     "start": "meteor --settings settings/local.json",
     "deploy:production": "git push production",
