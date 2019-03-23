@@ -5,12 +5,14 @@
   "scripts": {
     "start": "meteor --settings settings/local.json",
     "deploy:production": "git push production",
-    "deploy:staging": "git push staging develop:master",
+    "deploy:staging": "git push staging master",
     "lint": "eslint .",
     "lint:file": "eslint",
     "lint:size": "meteor --settings settings/local.json --production --extra-packages bundle-visualizer",
     "storybook": "start-storybook -s ./public -p 6060",
     "storybook:build": "build-storybook",
+    "logs:staging": "heroku logs --app spare-change-staging",
+    "logs:production": "heroku logs --app spare-change-for-charity",
     "test": "jest",
     "test:updateSnapshots": "jest --updateSnapshot"
   },
@@ -21,10 +23,12 @@
     "bcrypt": "^3.0.5",
     "meteor-babel": "^7.3.4",
     "meteor-node-stubs": "^0.4.1",
+    "plaid": "^3.1.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-load-image": "^0.1.6",
+    "react-plaid-link": "^1.2.0",
     "react-with-styles": "^3.2.0",
     "react-with-styles-interface-aphrodite": "^5.0.0",
     "simpl-schema": "^1.5.0"
