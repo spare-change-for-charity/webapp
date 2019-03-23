@@ -6,7 +6,7 @@ import TestPage from '../pages/TestPage';
 route({
   name: 'login.index',
   path: '/',
-  content: AuthPage,
+  content: TestPage,
 });
 
 route({
