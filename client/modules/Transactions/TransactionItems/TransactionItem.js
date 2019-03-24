@@ -1,17 +1,20 @@
 import React from 'react';
 
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+
 const TransactionItem = ({name, amount, date}) => (
-  <tr>
-    <td>
+  <TableRow>
+    <TableCell>
       {name}
-    </td>
-    <td>
+    </TableCell>
+    <TableCell>
       ${amount.toFixed(2)}
-    </td>
-    <td>
+    </TableCell>
+    <TableCell>
       {date}
-    </td>
-  </tr>
+    </TableCell>
+  </TableRow>
 );
 
 export default TransactionItem;

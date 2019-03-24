@@ -16,6 +16,16 @@ const materialTheme = createMuiTheme({
       // contrastText: '#000',
     },
   },
+  typography: {
+    useNextVariants: true,
+  },
+  overrides: {
+    MuiTableCell: {
+      root: {
+        fontSize: '1.3rem',
+      },
+    },
+  },
 });
 
 export default materialTheme;

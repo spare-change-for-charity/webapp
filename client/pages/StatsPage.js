@@ -5,13 +5,29 @@ import Plaid from '/lib/modules/Plaid';
 import TotalDonations from '/client/modules/Transactions/TotalDonations';
 import TransactionItems from '/client/modules/Transactions/TransactionItems';
 
+import {Grid} from '@material-ui/core';
+
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <TotalDonations />
-        <TransactionItems />
-      </React.Fragment>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        spacing={24}
+      >
+        <Grid
+          item
+        >
+          <TotalDonations />
+        </Grid>
+        <Grid
+          item
+        >
+          <TransactionItems />
+        </Grid>
+      </Grid>
     )
   }
 }

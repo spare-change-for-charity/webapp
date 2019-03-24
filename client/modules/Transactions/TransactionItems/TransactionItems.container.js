@@ -10,7 +10,7 @@ const getData = ({threadId}) => {
   const transactionsSub = Meteor.subscribe('transactions.all');
 
   const loggedInId = Meteor.userId();
-  const transactions = Transactions.find({}).fetch();
+  const transactions = Transactions.find({}, {sort: {paidAt: -1}, limit: 10}).fetch();
 
   // if (thread) {
   //   const {userIds} = thread;

@@ -23,7 +23,7 @@ const Layout = ({content}) => (
         }}>
           <h1 style={{fontSize: '60px'}}>
             Spare
-            <div class='subtitle' style={{fontSize: '20px'}}>
+            <div className='subtitle' style={{fontSize: '20px'}}>
               Change for Charity
             </div>
           </h1>
