@@ -4,6 +4,14 @@
   box-sizing: inherit;
 }
 
+:root {
+  --black: hsl(0, 0%, 0%);
+  --blue: hsl(202, 100%, 37%);
+  --green: hsl(116, 46%, 50%);
+  --greenDark: hsl(116, 46%, 40%);
+  --white: hsl(0, 0%, 100%);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -15,6 +23,7 @@ body {
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.6;
+  background-color: var(--blue);
 }
 
 body, div, dl, dt, dd,
@@ -27,4 +36,12 @@ p, pre, blockquote {
   margin: 0;
   font-weight: normal;
   outline: none;
+}
+
+.plaid-link {
+  background-color: var(--green);
+}
+
+.plaid-link:hover {
+  background-color: var(--greenDark);
 }

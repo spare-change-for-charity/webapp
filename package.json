@@ -4,7 +4,7 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
-    "start": "meteor --settings settings/local.json",
+    "start": "meteor --settings settings/staging.json",
     "deploy:production": "git push production",
     "deploy:staging": "git push staging master",
     "lint": "eslint .",
@@ -19,9 +19,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
+    "@material-ui/core": "^3.9.2",
     "airbnb-prop-types": "^2.10.0",
     "aphrodite": "^2.2.1",
     "bcrypt": "^3.0.5",
+    "date-fns": "^1.30.1",
     "meteor-babel": "^7.3.4",
     "meteor-node-stubs": "^0.4.1",
     "plaid": "^3.1.0",

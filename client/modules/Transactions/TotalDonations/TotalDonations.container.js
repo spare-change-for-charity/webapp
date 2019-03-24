@@ -4,13 +4,19 @@ import {withTracker} from 'meteor/react-meteor-data';
 import Transactions from '/lib/modules/Transactions';
 import Users from '/lib/modules/Users';
 
-import TransactionItems from './TransactionItems';
+import TotalDonations from './TotalDonations';
+
+const getChange = (amount) => Math.ceil(amount) - amount;
 
 const getData = ({threadId}) => {
   const transactionsSub = Meteor.subscribe('transactions.all');
 
   const loggedInId = Meteor.userId();
   const transactions = Transactions.find({}).fetch();
+
+  const donationTotal = transactions.reduce((sum, {amount}) => (
+    sum + (amount > 0 ? getChange(amount) : 0)
+  ), 0);
 
   // if (thread) {
   //   const {userIds} = thread;
@@ -29,9 +35,9 @@ const getData = ({threadId}) => {
   // }
 
   return {
-    transactions,
+    donationTotal,
     loggedInId,
   };
 };
 
-export default withTracker(getData)(TransactionItems);
+export default withTracker(getData)(TotalDonations);

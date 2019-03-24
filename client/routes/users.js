@@ -1,6 +1,7 @@
 import route from './route';
 
 import AuthPage from '../pages/AuthPage';
+import StatsPage from '../pages/StatsPage';
 import TestPage from '../pages/TestPage';
 
 route({
@@ -19,4 +20,10 @@ route({
   name: 'test',
   path: '/test',
   content: TestPage,
+});
+
+route({
+  name: 'stats',
+  path: '/stats',
+  content: StatsPage,
 });
