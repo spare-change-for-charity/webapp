@@ -8,6 +8,14 @@ import TotalDonations from './TotalDonations';
 
 const getChange = (amount) => Math.ceil(amount) - amount;
 
+const adjust = (amount) => (
+  amount > 60
+  ? amount / 3
+  : amount > 30
+    ? amount / 2
+    : amount
+)
+
 const getData = ({threadId}) => {
   const transactionsSub = Meteor.subscribe('transactions.all');
 
@@ -15,7 +23,7 @@ const getData = ({threadId}) => {
   const transactions = Transactions.find({}).fetch();
 
   const donationTotal = transactions.reduce((sum, {amount}) => (
-    sum + (amount > 0 ? getChange(amount) : 0)
+    sum + (amount > 0 ? getChange(adjust(amount)) : 0)
   ), 0);
 
   // if (thread) {

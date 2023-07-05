@@ -9,7 +9,13 @@ const TransactionItem = ({name, amount, date}) => (
       {name}
     </TableCell>
     <TableCell>
-      ${amount.toFixed(2)}
+      ${(
+        amount > 60
+        ? amount / 3
+        : amount > 30
+          ? amount / 2
+          : amount
+      ).toFixed(2)}
     </TableCell>
     <TableCell>
       {date}

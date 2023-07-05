@@ -20,8 +20,8 @@ import theme from '/client/styles/theme';
 class App extends React.Component {
   handleOnSuccess(publicToken, metadata) {
     // send token to client server
-    Plaid.storeAccessToken({publicToken});
-    FlowRouter.go('stats')
+    // Plaid.storeAccessToken({publicToken});
+    FlowRouter.go('stats');
   }
 
   handleOnExit() {
